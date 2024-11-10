@@ -1,1521 +1,1378 @@
-while not game:IsLoaded() or not game:GetService("CoreGui") or not game:GetService("Players").LocalPlayer or not game:GetService("Players").LocalPlayer.PlayerGui or not game:GetService("CoreGui"):FindFirstChild("TopBarApp") or not game:GetService("CoreGui"):FindFirstChild("PlayerList") or not game.Players.LocalPlayer.Character do task.wait(0.03) end
-local on = true -- Change to false if you want script to not run.
-if not on then return end
-if game.PlaceId ~= 823323202 then return end
-
-
-local scbl = {5075282538,815697507,313318196,5099383257}
-local admins = {35703015,4823933942,4862735779,5769154214,4812420044,191312500}
-
-if (not game.Players.LocalPlayer:IsFriendsWith(35703015) and not table.find(admins,game.Players.LocalPlayer.UserId)) or table.find(scbl,game.Players.LocalPlayer.UserId) then warn(":934: Expected ',' after table constructor element") return end
-
-
-local NAHub = Instance.new("ScreenGui")
-local AdminFrame = Instance.new("Frame")
-local TopBar = Instance.new("Frame")
-local TextLabel = Instance.new("TextLabel")
-local MidBar = Instance.new("Frame")
-local MainFrame = Instance.new("Frame")
-local HomeFrame = Instance.new("Frame")
-local UIListLayout = Instance.new("UIListLayout")
-local Frame1 = Instance.new("Frame")
-local TextLabel_2 = Instance.new("TextLabel")
-local Frame2 = Instance.new("Frame")
-local SubFrame1 = Instance.new("Frame")
-local TextLabel_3 = Instance.new("TextLabel")
-local TextButton = Instance.new("TextButton")
-local SubFrame2 = Instance.new("Frame")
-local TextButton_2 = Instance.new("TextButton")
-local TextLabel_4 = Instance.new("TextLabel")
-local Frame3 = Instance.new("Frame")
-local SubFrame1_2 = Instance.new("Frame")
-local TextLabel_5 = Instance.new("TextLabel")
-local TextButton_3 = Instance.new("TextButton")
-local SubFrame2_2 = Instance.new("Frame")
-local TextButton_4 = Instance.new("TextButton")
-local TextLabel_6 = Instance.new("TextLabel")
-local Frame4 = Instance.new("Frame")
-local SubFrame1_3 = Instance.new("Frame")
-local TextLabel_7 = Instance.new("TextLabel")
-local TextButton_5 = Instance.new("TextButton")
-local SubFrame2_3 = Instance.new("Frame")
-local TextButton_6 = Instance.new("TextButton")
-local TextLabel_8 = Instance.new("TextLabel")
-local Frame5 = Instance.new("Frame")
-local SubFrame1_4 = Instance.new("Frame")
-local TextLabel_9 = Instance.new("TextLabel")
-local TextButton_7 = Instance.new("TextButton")
-local SubFrame2_4 = Instance.new("Frame")
-local TextButton_8 = Instance.new("TextButton")
-local TextLabel_10 = Instance.new("TextLabel")
-local Frame6 = Instance.new("Frame")
-local SubFrame1_5 = Instance.new("Frame")
-local TextLabel_11 = Instance.new("TextLabel")
-local TextButton_9 = Instance.new("TextButton")
-local SubFrame2_5 = Instance.new("Frame")
-local TextButton_10 = Instance.new("TextButton")
-local TextLabel_12 = Instance.new("TextLabel")
-local Frame7 = Instance.new("Frame")
-local SubFrame1_6 = Instance.new("Frame")
-local TextLabel_13 = Instance.new("TextLabel")
-local TextButton_11 = Instance.new("TextBox")
-local SubFrame2_6 = Instance.new("Frame")
-local TextButton_12 = Instance.new("TextBox")
-local TextLabel_14 = Instance.new("TextLabel")
-local Frame8 = Instance.new("Frame")
-local SubFrame1_7 = Instance.new("Frame")
-local TextLabel_15 = Instance.new("TextLabel")
-local SubFrame2_7 = Instance.new("Frame")
-local TextLabel_16 = Instance.new("TextLabel")
-local Frame9 = Instance.new("Frame")
-local SubFrame1_8 = Instance.new("Frame")
-local TextLabel_17 = Instance.new("TextLabel")
-local SubFrame2_8 = Instance.new("Frame")
-local TextLabel_18 = Instance.new("TextLabel")
-local Frame10 = Instance.new("Frame")
-local SubFrame1_9 = Instance.new("Frame")
-local TextLabel_19 = Instance.new("TextLabel")
-local SubFrame2_9 = Instance.new("Frame")
-local TextLabel_20 = Instance.new("TextLabel")
-local Frame11 = Instance.new("Frame")
-local SubFrame1_10 = Instance.new("Frame")
-local TextLabel_21 = Instance.new("TextLabel")
-local SubFrame2_10 = Instance.new("Frame")
-local TextLabel_22 = Instance.new("TextLabel")
-local Frame0 = Instance.new("Frame")
-local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
-local AdminImgBtn = Instance.new("ImageButton")
-local CommandBarFrame = Instance.new("Frame")
-local CommandBar = Instance.new("TextBox")
-local CommandBarCorner = Instance.new("UICorner")
-local BackupsFolder = Instance.new("Folder")
-
-
-NAHub.Name = "NAHubv4.1"
-NAHub.Parent = game:GetService("CoreGui")
-NAHub.ResetOnSpawn = false
-
-AdminFrame.Name = "AdminFrame"
-AdminFrame.Parent = NAHub
-AdminFrame.AnchorPoint = Vector2.new(0, 0.5)
-AdminFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-AdminFrame.BackgroundTransparency = 0.400
-AdminFrame.BorderColor3 = Color3.fromRGB(40, 40, 40)
-AdminFrame.BorderSizePixel = 3
-AdminFrame.Position = UDim2.new(0.625, 0, 0.600000024, 0)
-AdminFrame.Size = UDim2.new(0.245491371, 0, 0.687170804, 0)
-AdminFrame.ZIndex = 2
-
-TopBar.Name = "TopBar"
-TopBar.Parent = AdminFrame
-TopBar.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-TopBar.BackgroundTransparency = 0.400
-TopBar.Size = UDim2.new(1, 0, 0.0556379817, 0)
-TopBar.ZIndex = 2
-
-TextLabel.Parent = TopBar
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.Size = UDim2.new(1, 0, 1, 0)
-TextLabel.ZIndex = 2
-TextLabel.Font = Enum.Font.Fantasy
-TextLabel.Text = "     Ninja Hub v4.1.01     "
-TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14.000
-TextLabel.TextWrapped = true
-
-MidBar.Name = "MidBar"
-MidBar.Parent = AdminFrame
-MidBar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-MidBar.BackgroundTransparency = 1.000
-MidBar.Position = UDim2.new(0, 0, 0.0556379817, 0)
-MidBar.Size = UDim2.new(1, 0, 0.943372905, 0)
-MidBar.ZIndex = 2
-
-MainFrame.Name = "MainFrame"
-MainFrame.Parent = MidBar
-MainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-MainFrame.BackgroundTransparency = 1.000
-MainFrame.Size = UDim2.new(1, 0, 1, 0)
-
-HomeFrame.Name = "HomeFrame"
-HomeFrame.Parent = MainFrame
-HomeFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-HomeFrame.BackgroundTransparency = 1.000
-HomeFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-HomeFrame.BorderSizePixel = 0
-HomeFrame.Size = UDim2.new(1, 0, 1, 0)
-
-UIListLayout.Parent = HomeFrame
-UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-
-Frame1.Name = "Frame1"
-Frame1.Parent = HomeFrame
-Frame1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame1.BackgroundTransparency = 1.000
-Frame1.LayoutOrder = 1
-Frame1.Size = UDim2.new(0.981999993, 0, 0.0579999983, 0)
-Frame1.ZIndex = 3
-
-TextLabel_2.Parent = Frame1
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.BackgroundTransparency = 1.000
-TextLabel_2.Size = UDim2.new(1, 0, 1, 0)
-TextLabel_2.ZIndex = 2
-TextLabel_2.Font = Enum.Font.Fantasy
-TextLabel_2.Text = "Training"
-TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.TextScaled = true
-TextLabel_2.TextSize = 14.000
-TextLabel_2.TextWrapped = true
-
-Frame2.Name = "Frame2"
-Frame2.Parent = HomeFrame
-Frame2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame2.BackgroundTransparency = 1.000
-Frame2.LayoutOrder = 2
-Frame2.Size = UDim2.new(0.981999993, 0, 0.086939998, 0)
-Frame2.ZIndex = 2
-
-SubFrame1.Name = "SubFrame1"
-SubFrame1.Parent = Frame2
-SubFrame1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-SubFrame1.BackgroundTransparency = 1.000
-SubFrame1.Size = UDim2.new(0.5, 0, 1, 0)
-SubFrame1.ZIndex = 2
-
-TextLabel_3.Parent = SubFrame1
-TextLabel_3.AnchorPoint = Vector2.new(0, 0.5)
-TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_3.BackgroundTransparency = 1.000
-TextLabel_3.Position = UDim2.new(0.0339098945, 0, 0.5, 0)
-TextLabel_3.Size = UDim2.new(0.678196311, 0, 0.600000024, 0)
-TextLabel_3.ZIndex = 2
-TextLabel_3.Font = Enum.Font.Fantasy
-TextLabel_3.Text = "AutoTrain:"
-TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_3.TextScaled = true
-TextLabel_3.TextSize = 14.000
-TextLabel_3.TextWrapped = true
-TextLabel_3.TextXAlignment = Enum.TextXAlignment.Left
-
-TextButton.Parent = SubFrame1
-TextButton.AnchorPoint = Vector2.new(0, 0.5)
-TextButton.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
-TextButton.Position = UDim2.new(0.699999988, 0, 0.5, 0)
-TextButton.Size = UDim2.new(0.287999988, 0, 0.600000024, 0)
-TextButton.ZIndex = 2
-TextButton.Font = Enum.Font.Fantasy
-TextButton.Text = "Off"
-TextButton.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextButton.TextScaled = true
-TextButton.TextSize = 14.000
-TextButton.TextWrapped = true
-
-SubFrame2.Name = "SubFrame2"
-SubFrame2.Parent = Frame2
-SubFrame2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-SubFrame2.BackgroundTransparency = 1.000
-SubFrame2.Position = UDim2.new(0.5, 0, 0, 0)
-SubFrame2.Size = UDim2.new(0.5, 0, 1, 0)
-SubFrame2.ZIndex = 2
-
-TextButton_2.Parent = SubFrame2
-TextButton_2.AnchorPoint = Vector2.new(0, 0.5)
-TextButton_2.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
-TextButton_2.Position = UDim2.new(0.699999988, 0, 0.5, 0)
-TextButton_2.Size = UDim2.new(0.287999988, 0, 0.600000024, 0)
-TextButton_2.ZIndex = 2
-TextButton_2.Font = Enum.Font.Fantasy
-TextButton_2.Text = "Off"
-TextButton_2.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextButton_2.TextScaled = true
-TextButton_2.TextSize = 14.000
-TextButton_2.TextWrapped = true
-
-TextLabel_4.Parent = SubFrame2
-TextLabel_4.AnchorPoint = Vector2.new(0, 0.5)
-TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_4.BackgroundTransparency = 1.000
-TextLabel_4.Position = UDim2.new(0.0339098945, 0, 0.5, 0)
-TextLabel_4.Size = UDim2.new(0.678196311, 0, 0.600000024, 0)
-TextLabel_4.ZIndex = 2
-TextLabel_4.Font = Enum.Font.Fantasy
-TextLabel_4.Text = "AutoEquip:"
-TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_4.TextScaled = true
-TextLabel_4.TextSize = 14.000
-TextLabel_4.TextWrapped = true
-TextLabel_4.TextXAlignment = Enum.TextXAlignment.Left
-
-Frame3.Name = "Frame3"
-Frame3.Parent = HomeFrame
-Frame3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame3.BackgroundTransparency = 1.000
-Frame3.LayoutOrder = 3
-Frame3.Size = UDim2.new(0.981999993, 0, 0.086939998, 0)
-Frame3.ZIndex = 2
-
-SubFrame1_2.Name = "SubFrame1"
-SubFrame1_2.Parent = Frame3
-SubFrame1_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-SubFrame1_2.BackgroundTransparency = 1.000
-SubFrame1_2.Size = UDim2.new(0.5, 0, 1, 0)
-SubFrame1_2.ZIndex = 2
-
-TextLabel_5.Parent = SubFrame1_2
-TextLabel_5.AnchorPoint = Vector2.new(0, 0.5)
-TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_5.BackgroundTransparency = 1.000
-TextLabel_5.Position = UDim2.new(0.0339098945, 0, 0.5, 0)
-TextLabel_5.Size = UDim2.new(0.678196311, 0, 0.600000024, 0)
-TextLabel_5.ZIndex = 2
-TextLabel_5.Font = Enum.Font.Fantasy
-TextLabel_5.Text = "NoTS:"
-TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_5.TextScaled = true
-TextLabel_5.TextSize = 14.000
-TextLabel_5.TextWrapped = true
-TextLabel_5.TextXAlignment = Enum.TextXAlignment.Left
-
-TextButton_3.Parent = SubFrame1_2
-TextButton_3.AnchorPoint = Vector2.new(0, 0.5)
-TextButton_3.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
-TextButton_3.Position = UDim2.new(0.699999988, 0, 0.5, 0)
-TextButton_3.Size = UDim2.new(0.287999988, 0, 0.600000024, 0)
-TextButton_3.ZIndex = 2
-TextButton_3.Font = Enum.Font.Fantasy
-TextButton_3.Text = "Off"
-TextButton_3.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextButton_3.TextScaled = true
-TextButton_3.TextSize = 14.000
-TextButton_3.TextWrapped = true
-
-SubFrame2_2.Name = "SubFrame2"
-SubFrame2_2.Parent = Frame3
-SubFrame2_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-SubFrame2_2.BackgroundTransparency = 1.000
-SubFrame2_2.Position = UDim2.new(0.5, 0, 0, 0)
-SubFrame2_2.Size = UDim2.new(0.5, 0, 1, 0)
-SubFrame2_2.ZIndex = 2
-
-TextButton_4.Parent = SubFrame2_2
-TextButton_4.AnchorPoint = Vector2.new(0, 0.5)
-TextButton_4.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
-TextButton_4.Position = UDim2.new(0.699999988, 0, 0.5, 0)
-TextButton_4.Size = UDim2.new(0.287999988, 0, 0.600000024, 0)
-TextButton_4.ZIndex = 2
-TextButton_4.Font = Enum.Font.Fantasy
-TextButton_4.Text = "Off"
-TextButton_4.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextButton_4.TextScaled = true
-TextButton_4.TextSize = 14.000
-TextButton_4.TextWrapped = true
-
-TextLabel_6.Parent = SubFrame2_2
-TextLabel_6.AnchorPoint = Vector2.new(0, 0.5)
-TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_6.BackgroundTransparency = 1.000
-TextLabel_6.Position = UDim2.new(0.0339098945, 0, 0.5, 0)
-TextLabel_6.Size = UDim2.new(0.678196311, 0, 0.600000024, 0)
-TextLabel_6.ZIndex = 2
-TextLabel_6.Font = Enum.Font.Fantasy
-TextLabel_6.Text = "SeatESP:"
-TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_6.TextScaled = true
-TextLabel_6.TextSize = 14.000
-TextLabel_6.TextWrapped = true
-TextLabel_6.TextXAlignment = Enum.TextXAlignment.Left
-
-Frame4.Name = "Frame4"
-Frame4.Parent = HomeFrame
-Frame4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame4.BackgroundTransparency = 1.000
-Frame4.LayoutOrder = 4
-Frame4.Size = UDim2.new(0.981999993, 0, 0.086939998, 0)
-Frame4.ZIndex = 2
-
-SubFrame1_3.Name = "SubFrame1"
-SubFrame1_3.Parent = Frame4
-SubFrame1_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-SubFrame1_3.BackgroundTransparency = 1.000
-SubFrame1_3.Size = UDim2.new(0.5, 0, 1, 0)
-SubFrame1_3.ZIndex = 2
-
-TextLabel_7.Parent = SubFrame1_3
-TextLabel_7.AnchorPoint = Vector2.new(0, 0.5)
-TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_7.BackgroundTransparency = 1.000
-TextLabel_7.Position = UDim2.new(0.0339098945, 0, 0.5, 0)
-TextLabel_7.Size = UDim2.new(0.678196311, 0, 0.600000024, 0)
-TextLabel_7.ZIndex = 2
-TextLabel_7.Font = Enum.Font.Fantasy
-TextLabel_7.Text = "AutoRespawn:"
-TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_7.TextScaled = true
-TextLabel_7.TextSize = 14.000
-TextLabel_7.TextWrapped = true
-TextLabel_7.TextXAlignment = Enum.TextXAlignment.Left
-
-TextButton_5.Parent = SubFrame1_3
-TextButton_5.AnchorPoint = Vector2.new(0, 0.5)
-TextButton_5.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
-TextButton_5.Position = UDim2.new(0.699999988, 0, 0.5, 0)
-TextButton_5.Size = UDim2.new(0.287999988, 0, 0.600000024, 0)
-TextButton_5.ZIndex = 2
-TextButton_5.Font = Enum.Font.Fantasy
-TextButton_5.Text = "Off"
-TextButton_5.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextButton_5.TextScaled = true
-TextButton_5.TextSize = 14.000
-TextButton_5.TextWrapped = true
-
-SubFrame2_3.Name = "SubFrame2"
-SubFrame2_3.Parent = Frame4
-SubFrame2_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-SubFrame2_3.BackgroundTransparency = 1.000
-SubFrame2_3.Position = UDim2.new(0.5, 0, 0, 0)
-SubFrame2_3.Size = UDim2.new(0.5, 0, 1, 0)
-SubFrame2_3.ZIndex = 2
-
-TextButton_6.Parent = SubFrame2_3
-TextButton_6.AnchorPoint = Vector2.new(0, 0.5)
-TextButton_6.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
-TextButton_6.Position = UDim2.new(0.699999988, 0, 0.5, 0)
-TextButton_6.Size = UDim2.new(0.287999988, 0, 0.600000024, 0)
-TextButton_6.ZIndex = 2
-TextButton_6.Font = Enum.Font.Fantasy
-TextButton_6.Text = "Off"
-TextButton_6.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextButton_6.TextScaled = true
-TextButton_6.TextSize = 14.000
-TextButton_6.TextWrapped = true
-
-TextLabel_8.Parent = SubFrame2_3
-TextLabel_8.AnchorPoint = Vector2.new(0, 0.5)
-TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_8.BackgroundTransparency = 1.000
-TextLabel_8.Position = UDim2.new(0.0339098945, 0, 0.5, 0)
-TextLabel_8.Size = UDim2.new(0.678196311, 0, 0.600000024, 0)
-TextLabel_8.ZIndex = 2
-TextLabel_8.Font = Enum.Font.Fantasy
-TextLabel_8.Text = "AntiAfk:"
-TextLabel_8.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_8.TextScaled = true
-TextLabel_8.TextSize = 14.000
-TextLabel_8.TextWrapped = true
-TextLabel_8.TextXAlignment = Enum.TextXAlignment.Left
-
-Frame5.Name = "Frame5"
-Frame5.Parent = HomeFrame
-Frame5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame5.BackgroundTransparency = 1.000
-Frame5.LayoutOrder = 5
-Frame5.Size = UDim2.new(0.981999993, 0, 0.086939998, 0)
-Frame5.ZIndex = 2
-
-SubFrame1_4.Name = "SubFrame1"
-SubFrame1_4.Parent = Frame5
-SubFrame1_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-SubFrame1_4.BackgroundTransparency = 1.000
-SubFrame1_4.Size = UDim2.new(0.5, 0, 1, 0)
-SubFrame1_4.ZIndex = 2
-
-TextLabel_9.Parent = SubFrame1_4
-TextLabel_9.AnchorPoint = Vector2.new(0, 0.5)
-TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_9.BackgroundTransparency = 1.000
-TextLabel_9.Position = UDim2.new(0.0339098945, 0, 0.5, 0)
-TextLabel_9.Size = UDim2.new(0.678196311, 0, 0.600000024, 0)
-TextLabel_9.ZIndex = 2
-TextLabel_9.Font = Enum.Font.Fantasy
-TextLabel_9.Text = "Noclip:"
-TextLabel_9.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_9.TextScaled = true
-TextLabel_9.TextSize = 14.000
-TextLabel_9.TextWrapped = true
-TextLabel_9.TextXAlignment = Enum.TextXAlignment.Left
-
-TextButton_7.Parent = SubFrame1_4
-TextButton_7.AnchorPoint = Vector2.new(0, 0.5)
-TextButton_7.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
-TextButton_7.Position = UDim2.new(0.699999988, 0, 0.5, 0)
-TextButton_7.Size = UDim2.new(0.287999988, 0, 0.600000024, 0)
-TextButton_7.ZIndex = 2
-TextButton_7.Font = Enum.Font.Fantasy
-TextButton_7.Text = "Off"
-TextButton_7.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextButton_7.TextScaled = true
-TextButton_7.TextSize = 14.000
-TextButton_7.TextWrapped = true
-
-SubFrame2_4.Name = "SubFrame2"
-SubFrame2_4.Parent = Frame5
-SubFrame2_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-SubFrame2_4.BackgroundTransparency = 1.000
-SubFrame2_4.Position = UDim2.new(0.5, 0, 0, 0)
-SubFrame2_4.Size = UDim2.new(0.5, 0, 1, 0)
-SubFrame2_4.ZIndex = 2
-
-TextButton_8.Parent = SubFrame2_4
-TextButton_8.AnchorPoint = Vector2.new(0, 0.5)
-TextButton_8.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
-TextButton_8.Position = UDim2.new(0.699999988, 0, 0.5, 0)
-TextButton_8.Size = UDim2.new(0.287999988, 0, 0.600000024, 0)
-TextButton_8.ZIndex = 2
-TextButton_8.Font = Enum.Font.Fantasy
-TextButton_8.Text = "Off"
-TextButton_8.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextButton_8.TextScaled = true
-TextButton_8.TextSize = 14.000
-TextButton_8.TextWrapped = true
-
-TextLabel_10.Parent = SubFrame2_4
-TextLabel_10.AnchorPoint = Vector2.new(0, 0.5)
-TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_10.BackgroundTransparency = 1.000
-TextLabel_10.Position = UDim2.new(0.0339098945, 0, 0.5, 0)
-TextLabel_10.Size = UDim2.new(0.678196311, 0, 0.600000024, 0)
-TextLabel_10.ZIndex = 2
-TextLabel_10.Font = Enum.Font.Fantasy
-TextLabel_10.Text = "Freeze:"
-TextLabel_10.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_10.TextScaled = true
-TextLabel_10.TextSize = 14.000
-TextLabel_10.TextWrapped = true
-TextLabel_10.TextXAlignment = Enum.TextXAlignment.Left
-
-Frame6.Name = "Frame6"
-Frame6.Parent = HomeFrame
-Frame6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame6.BackgroundTransparency = 1.000
-Frame6.LayoutOrder = 6
-Frame6.Size = UDim2.new(0.981999993, 0, 0.086939998, 0)
-Frame6.ZIndex = 2
-
-SubFrame1_5.Name = "SubFrame1"
-SubFrame1_5.Parent = Frame6
-SubFrame1_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-SubFrame1_5.BackgroundTransparency = 1.000
-SubFrame1_5.Size = UDim2.new(0.5, 0, 1, 0)
-SubFrame1_5.ZIndex = 2
-
-TextLabel_11.Parent = SubFrame1_5
-TextLabel_11.AnchorPoint = Vector2.new(0, 0.5)
-TextLabel_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_11.BackgroundTransparency = 1.000
-TextLabel_11.Position = UDim2.new(0.0339098945, 0, 0.5, 0)
-TextLabel_11.Size = UDim2.new(0.678196311, 0, 0.600000024, 0)
-TextLabel_11.ZIndex = 2
-TextLabel_11.Font = Enum.Font.Fantasy
-TextLabel_11.Text = "NoFF:"
-TextLabel_11.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_11.TextScaled = true
-TextLabel_11.TextSize = 14.000
-TextLabel_11.TextWrapped = true
-TextLabel_11.TextXAlignment = Enum.TextXAlignment.Left
-
-TextButton_9.Parent = SubFrame1_5
-TextButton_9.AnchorPoint = Vector2.new(0, 0.5)
-TextButton_9.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
-TextButton_9.Position = UDim2.new(0.699999988, 0, 0.5, 0)
-TextButton_9.Size = UDim2.new(0.287999988, 0, 0.600000024, 0)
-TextButton_9.ZIndex = 2
-TextButton_9.Font = Enum.Font.Fantasy
-TextButton_9.Text = "Off"
-TextButton_9.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextButton_9.TextScaled = true
-TextButton_9.TextSize = 14.000
-TextButton_9.TextWrapped = true
-
-SubFrame2_5.Name = "SubFrame2"
-SubFrame2_5.Parent = Frame6
-SubFrame2_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-SubFrame2_5.BackgroundTransparency = 1.000
-SubFrame2_5.Position = UDim2.new(0.5, 0, 0, 0)
-SubFrame2_5.Size = UDim2.new(0.5, 0, 1, 0)
-SubFrame2_5.ZIndex = 2
-
-TextButton_10.Parent = SubFrame2_5
-TextButton_10.AnchorPoint = Vector2.new(0, 0.5)
-TextButton_10.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
-TextButton_10.Position = UDim2.new(0.699999988, 0, 0.5, 0)
-TextButton_10.Size = UDim2.new(0.287999988, 0, 0.600000024, 0)
-TextButton_10.ZIndex = 2
-TextButton_10.Font = Enum.Font.Fantasy
-TextButton_10.Text = "Off"
-TextButton_10.TextColor3 = Color3.fromRGB(255, 0, 0)
-TextButton_10.TextScaled = true
-TextButton_10.TextSize = 14.000
-TextButton_10.TextWrapped = true
-
-TextLabel_12.Parent = SubFrame2_5
-TextLabel_12.AnchorPoint = Vector2.new(0, 0.5)
-TextLabel_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_12.BackgroundTransparency = 1.000
-TextLabel_12.Position = UDim2.new(0.0339098945, 0, 0.5, 0)
-TextLabel_12.Size = UDim2.new(0.678196311, 0, 0.600000024, 0)
-TextLabel_12.ZIndex = 2
-TextLabel_12.Font = Enum.Font.Fantasy
-TextLabel_12.Text = "SafeSpot:"
-TextLabel_12.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_12.TextScaled = true
-TextLabel_12.TextSize = 14.000
-TextLabel_12.TextWrapped = true
-TextLabel_12.TextXAlignment = Enum.TextXAlignment.Left
-
-Frame7.Name = "Frame7"
-Frame7.Parent = HomeFrame
-Frame7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame7.BackgroundTransparency = 1.000
-Frame7.LayoutOrder = 7
-Frame7.Size = UDim2.new(0.981999993, 0, 0.086939998, 0)
-Frame7.ZIndex = 2
-
-SubFrame1_6.Name = "SubFrame1"
-SubFrame1_6.Parent = Frame7
-SubFrame1_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-SubFrame1_6.BackgroundTransparency = 1.000
-SubFrame1_6.Size = UDim2.new(0.5, 0, 1, 0)
-SubFrame1_6.ZIndex = 2
-
-TextLabel_13.Parent = SubFrame1_6
-TextLabel_13.AnchorPoint = Vector2.new(0, 0.5)
-TextLabel_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_13.BackgroundTransparency = 1.000
-TextLabel_13.Position = UDim2.new(0.0339095443, 0, 0.5, 0)
-TextLabel_13.Size = UDim2.new(0.666090369, 0, 0.600000024, 0)
-TextLabel_13.ZIndex = 2
-TextLabel_13.Font = Enum.Font.Fantasy
-TextLabel_13.Text = "TrainRate:"
-TextLabel_13.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_13.TextScaled = true
-TextLabel_13.TextSize = 14.000
-TextLabel_13.TextWrapped = true
-TextLabel_13.TextXAlignment = Enum.TextXAlignment.Left
-
-TextButton_11.Name = "TextButton"
-TextButton_11.Parent = SubFrame1_6
-TextButton_11.AnchorPoint = Vector2.new(0, 0.5)
-TextButton_11.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_11.BackgroundTransparency = 0.600
-TextButton_11.BorderSizePixel = 2
-TextButton_11.Position = UDim2.new(0.699999988, 0, 0.5, 0)
-TextButton_11.Size = UDim2.new(0.287999988, 0, 0.600000024, 0)
-TextButton_11.ZIndex = 2
-TextButton_11.ClearTextOnFocus = false
-TextButton_11.Font = Enum.Font.Fantasy
-TextButton_11.Text = "0.7"
-TextButton_11.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_11.TextScaled = true
-TextButton_11.TextSize = 14.000
-TextButton_11.TextWrapped = true
-
-SubFrame2_6.Name = "SubFrame2"
-SubFrame2_6.Parent = Frame7
-SubFrame2_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-SubFrame2_6.BackgroundTransparency = 1.000
-SubFrame2_6.Position = UDim2.new(0.5, 0, 0, 0)
-SubFrame2_6.Size = UDim2.new(0.5, 0, 1, 0)
-SubFrame2_6.ZIndex = 2
-
-TextButton_12.Name = "TextButton"
-TextButton_12.Parent = SubFrame2_6
-TextButton_12.AnchorPoint = Vector2.new(0, 0.5)
-TextButton_12.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-TextButton_12.BackgroundTransparency = 0.600
-TextButton_12.BorderSizePixel = 2
-TextButton_12.Position = UDim2.new(0.699999988, 0, 0.5, 0)
-TextButton_12.Size = UDim2.new(0.287999988, 0, 0.600000024, 0)
-TextButton_12.ZIndex = 2
-TextButton_12.ClearTextOnFocus = false
-TextButton_12.Font = Enum.Font.Fantasy
-TextButton_12.Text = "20"
-TextButton_12.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextButton_12.TextScaled = true
-TextButton_12.TextSize = 14.000
-TextButton_12.TextWrapped = true
-
-TextLabel_14.Parent = SubFrame2_6
-TextLabel_14.AnchorPoint = Vector2.new(0, 0.5)
-TextLabel_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_14.BackgroundTransparency = 1.000
-TextLabel_14.Position = UDim2.new(0.0339095443, 0, 0.5, 0)
-TextLabel_14.Size = UDim2.new(0.666090369, 0, 0.600000024, 0)
-TextLabel_14.ZIndex = 2
-TextLabel_14.Font = Enum.Font.Fantasy
-TextLabel_14.Text = "TrainAmount:"
-TextLabel_14.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_14.TextScaled = true
-TextLabel_14.TextSize = 14.000
-TextLabel_14.TextWrapped = true
-TextLabel_14.TextXAlignment = Enum.TextXAlignment.Left
-
-Frame8.Name = "Frame8"
-Frame8.Parent = HomeFrame
-Frame8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame8.BackgroundTransparency = 1.000
-Frame8.LayoutOrder = 8
-Frame8.Size = UDim2.new(0.981999993, 0, 0.086939998, 0)
-Frame8.ZIndex = 2
-
-SubFrame1_7.Name = "SubFrame1"
-SubFrame1_7.Parent = Frame8
-SubFrame1_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-SubFrame1_7.BackgroundTransparency = 1.000
-SubFrame1_7.Size = UDim2.new(0.5, 0, 1, 0)
-SubFrame1_7.ZIndex = 2
-
-TextLabel_15.Parent = SubFrame1_7
-TextLabel_15.AnchorPoint = Vector2.new(0, 0.5)
-TextLabel_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_15.BackgroundTransparency = 1.000
-TextLabel_15.Position = UDim2.new(0.0339098945, 0, 0.5, 0)
-TextLabel_15.Size = UDim2.new(0.678196311, 0, 0.600000024, 0)
-TextLabel_15.ZIndex = 2
-TextLabel_15.Font = Enum.Font.Fantasy
-TextLabel_15.Text = "Ninjutsu:"
-TextLabel_15.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_15.TextScaled = true
-TextLabel_15.TextSize = 14.000
-TextLabel_15.TextWrapped = true
-TextLabel_15.TextXAlignment = Enum.TextXAlignment.Left
-
-SubFrame2_7.Name = "SubFrame2"
-SubFrame2_7.Parent = Frame8
-SubFrame2_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-SubFrame2_7.BackgroundTransparency = 1.000
-SubFrame2_7.Position = UDim2.new(0.5, 0, 0, 0)
-SubFrame2_7.Size = UDim2.new(0.5, 0, 1, 0)
-SubFrame2_7.ZIndex = 2
-
-TextLabel_16.Parent = SubFrame2_7
-TextLabel_16.AnchorPoint = Vector2.new(1, 0.5)
-TextLabel_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_16.BackgroundTransparency = 1.000
-TextLabel_16.Position = UDim2.new(0.989999771, 0, 0.499999583, 0)
-TextLabel_16.Size = UDim2.new(1.27789295, 0, 0.600000024, 0)
-TextLabel_16.ZIndex = 2
-TextLabel_16.Font = Enum.Font.Fantasy
-TextLabel_16.Text = "629,247,950"
-TextLabel_16.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_16.TextScaled = true
-TextLabel_16.TextSize = 14.000
-TextLabel_16.TextWrapped = true
-TextLabel_16.TextXAlignment = Enum.TextXAlignment.Right
-
-Frame9.Name = "Frame9"
-Frame9.Parent = HomeFrame
-Frame9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame9.BackgroundTransparency = 1.000
-Frame9.LayoutOrder = 9
-Frame9.Size = UDim2.new(0.981999993, 0, 0.086939998, 0)
-Frame9.ZIndex = 2
-
-SubFrame1_8.Name = "SubFrame1"
-SubFrame1_8.Parent = Frame9
-SubFrame1_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-SubFrame1_8.BackgroundTransparency = 1.000
-SubFrame1_8.Size = UDim2.new(0.5, 0, 1, 0)
-SubFrame1_8.ZIndex = 2
-
-TextLabel_17.Parent = SubFrame1_8
-TextLabel_17.AnchorPoint = Vector2.new(0, 0.5)
-TextLabel_17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_17.BackgroundTransparency = 1.000
-TextLabel_17.Position = UDim2.new(0.0339098945, 0, 0.5, 0)
-TextLabel_17.Size = UDim2.new(0.678196311, 0, 0.600000024, 0)
-TextLabel_17.ZIndex = 2
-TextLabel_17.Font = Enum.Font.Fantasy
-TextLabel_17.Text = "Reputation:"
-TextLabel_17.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_17.TextScaled = true
-TextLabel_17.TextSize = 14.000
-TextLabel_17.TextWrapped = true
-TextLabel_17.TextXAlignment = Enum.TextXAlignment.Left
-
-SubFrame2_8.Name = "SubFrame2"
-SubFrame2_8.Parent = Frame9
-SubFrame2_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-SubFrame2_8.BackgroundTransparency = 1.000
-SubFrame2_8.Position = UDim2.new(0.5, 0, 0, 0)
-SubFrame2_8.Size = UDim2.new(0.5, 0, 1, 0)
-SubFrame2_8.ZIndex = 2
-
-TextLabel_18.Parent = SubFrame2_8
-TextLabel_18.AnchorPoint = Vector2.new(1, 0.5)
-TextLabel_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_18.BackgroundTransparency = 1.000
-TextLabel_18.Position = UDim2.new(0.989999771, 0, 0.499999583, 0)
-TextLabel_18.Size = UDim2.new(1.27789295, 0, 0.600000024, 0)
-TextLabel_18.ZIndex = 2
-TextLabel_18.Font = Enum.Font.Fantasy
-TextLabel_18.Text = "1,000,000,000,000,000,000"
-TextLabel_18.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_18.TextScaled = true
-TextLabel_18.TextSize = 14.000
-TextLabel_18.TextWrapped = true
-TextLabel_18.TextXAlignment = Enum.TextXAlignment.Right
-
-Frame10.Name = "Frame10"
-Frame10.Parent = HomeFrame
-Frame10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame10.BackgroundTransparency = 1.000
-Frame10.LayoutOrder = 10
-Frame10.Size = UDim2.new(0.981999993, 0, 0.086939998, 0)
-Frame10.ZIndex = 2
-
-SubFrame1_9.Name = "SubFrame1"
-SubFrame1_9.Parent = Frame10
-SubFrame1_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-SubFrame1_9.BackgroundTransparency = 1.000
-SubFrame1_9.Size = UDim2.new(0.5, 0, 1, 0)
-SubFrame1_9.ZIndex = 2
-
-TextLabel_19.Parent = SubFrame1_9
-TextLabel_19.AnchorPoint = Vector2.new(0, 0.5)
-TextLabel_19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_19.BackgroundTransparency = 1.000
-TextLabel_19.Position = UDim2.new(0.0339098945, 0, 0.5, 0)
-TextLabel_19.Size = UDim2.new(0.678196311, 0, 0.600000024, 0)
-TextLabel_19.ZIndex = 2
-TextLabel_19.Font = Enum.Font.Fantasy
-TextLabel_19.Text = "ServerTime:"
-TextLabel_19.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_19.TextScaled = true
-TextLabel_19.TextSize = 14.000
-TextLabel_19.TextWrapped = true
-TextLabel_19.TextXAlignment = Enum.TextXAlignment.Left
-
-SubFrame2_9.Name = "SubFrame2"
-SubFrame2_9.Parent = Frame10
-SubFrame2_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-SubFrame2_9.BackgroundTransparency = 1.000
-SubFrame2_9.Position = UDim2.new(0.5, 0, 0, 0)
-SubFrame2_9.Size = UDim2.new(0.5, 0, 1, 0)
-SubFrame2_9.ZIndex = 2
-
-TextLabel_20.Parent = SubFrame2_9
-TextLabel_20.AnchorPoint = Vector2.new(1, 0.5)
-TextLabel_20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_20.BackgroundTransparency = 1.000
-TextLabel_20.Position = UDim2.new(0.989999771, 0, 0.499999583, 0)
-TextLabel_20.Size = UDim2.new(1.27789295, 0, 0.600000024, 0)
-TextLabel_20.ZIndex = 2
-TextLabel_20.Font = Enum.Font.Fantasy
-TextLabel_20.Text = "00:00:00"
-TextLabel_20.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_20.TextScaled = true
-TextLabel_20.TextSize = 14.000
-TextLabel_20.TextWrapped = true
-TextLabel_20.TextXAlignment = Enum.TextXAlignment.Right
-
-Frame11.Name = "Frame11"
-Frame11.Parent = HomeFrame
-Frame11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame11.BackgroundTransparency = 1.000
-Frame11.LayoutOrder = 11
-Frame11.Size = UDim2.new(0.981999993, 0, 0.086939998, 0)
-Frame11.ZIndex = 2
-
-SubFrame1_10.Name = "SubFrame1"
-SubFrame1_10.Parent = Frame11
-SubFrame1_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-SubFrame1_10.BackgroundTransparency = 1.000
-SubFrame1_10.Size = UDim2.new(0.5, 0, 1, 0)
-SubFrame1_10.ZIndex = 2
-
-TextLabel_21.Parent = SubFrame1_10
-TextLabel_21.AnchorPoint = Vector2.new(0, 0.5)
-TextLabel_21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_21.BackgroundTransparency = 1.000
-TextLabel_21.Position = UDim2.new(0.0339098945, 0, 0.5, 0)
-TextLabel_21.Size = UDim2.new(0.678196311, 0, 0.600000024, 0)
-TextLabel_21.ZIndex = 2
-TextLabel_21.Font = Enum.Font.Fantasy
-TextLabel_21.Text = "TotalTime:"
-TextLabel_21.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_21.TextScaled = true
-TextLabel_21.TextSize = 14.000
-TextLabel_21.TextWrapped = true
-TextLabel_21.TextXAlignment = Enum.TextXAlignment.Left
-
-SubFrame2_10.Name = "SubFrame2"
-SubFrame2_10.Parent = Frame11
-SubFrame2_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-SubFrame2_10.BackgroundTransparency = 1.000
-SubFrame2_10.Position = UDim2.new(0.5, 0, 0, 0)
-SubFrame2_10.Size = UDim2.new(0.5, 0, 1, 0)
-SubFrame2_10.ZIndex = 2
-
-TextLabel_22.Parent = SubFrame2_10
-TextLabel_22.AnchorPoint = Vector2.new(1, 0.5)
-TextLabel_22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_22.BackgroundTransparency = 1.000
-TextLabel_22.Position = UDim2.new(0.989999771, 0, 0.499999583, 0)
-TextLabel_22.Size = UDim2.new(1.27789295, 0, 0.600000024, 0)
-TextLabel_22.ZIndex = 2
-TextLabel_22.Font = Enum.Font.Fantasy
-TextLabel_22.Text = "00:00:00"
-TextLabel_22.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_22.TextScaled = true
-TextLabel_22.TextSize = 14.000
-TextLabel_22.TextWrapped = true
-TextLabel_22.TextXAlignment = Enum.TextXAlignment.Right
-
-Frame0.Name = "Frame0"
-Frame0.Parent = HomeFrame
-Frame0.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame0.BackgroundTransparency = 1.000
-Frame0.Position = UDim2.new(1.7801031e-07, 0, 0, 0)
-Frame0.Size = UDim2.new(0.981999934, 0, 0.0177947488, 0)
-Frame0.ZIndex = 3
-
-UIAspectRatioConstraint.Parent = AdminFrame
-UIAspectRatioConstraint.AspectRatio = 0.862
-
-AdminImgBtn.Name = "AdminImgBtn"
-AdminImgBtn.Parent = NAHub
-AdminImgBtn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-AdminImgBtn.BackgroundTransparency = 1.000
-AdminImgBtn.Position = UDim2.new(0.889729738, 0, 0.699999988, 0)
-AdminImgBtn.Size = UDim2.new(0.109999999, 0, 0.0790000036, 0)
-AdminImgBtn.Selected = true
-AdminImgBtn.Image = "rbxassetid://10563016738"
-
-CommandBarFrame.Name = "CommandBarFrame"
-CommandBarFrame.Parent = NAHub
-CommandBarFrame.AnchorPoint = Vector2.new(0.5, 0)
-CommandBarFrame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-CommandBarFrame.Position = UDim2.new(0.5, 0, 1, 0)
-CommandBarFrame.Size = UDim2.new(0.0933617353, 0, 0.0327022374, 0)
-CommandBarFrame.BackgroundTransparency = 1
-
-CommandBar.Name = "CommandBar"
-CommandBar.Parent = CommandBarFrame
-CommandBar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CommandBar.BackgroundTransparency = 1.000
-CommandBar.Size = UDim2.new(1, 0, 1, 0)
-CommandBar.ClearTextOnFocus = false
-CommandBar.Font = Enum.Font.Gotham
-CommandBar.Text = ""
-CommandBar.TextColor3 = Color3.fromRGB(255, 255, 255)
-CommandBar.TextScaled = true
-CommandBar.TextSize = 14.000
-CommandBar.TextWrapped = true
-
-CommandBarCorner.Parent = CommandBarFrame
-
-BackupsFolder.Parent = NAHub
-BackupsFolder.Name = "BackupsFolder"
-
-
-
+---- RAYFIELD UI LIBRARY ----
+---- 1987 [SHANGHAI]
+---- leaderstats [T]
+---- fix mobile glitch [T]
+
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local Window = Rayfield:CreateWindow({
+    Name = "Shanghai | neondomo1662",
+    LoadingTitle = "Welcome to Shanghai",
+    LoadingSubtitle = "Shanghai",
+ })
+ local Tab = Window:CreateTab("Training")
+ local Section = Tab:CreateSection("1")
+ local Button = Tab:CreateButton({
+    Name = "[] AutoTrainX2",
+    Callback = function()
+        local rs = game:GetService("ReplicatedStorage")
+        while wait(0.68) do
+            rs.RemoteEvent.AddPowerEvent:FireServer("FromTraining", 20)
+            wait(0.68)
+            rs.RemoteEvent.AddPowerEvent:FireServer("FromTraining", 19.99)
+        end
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] AutoTrainX1",
+    Callback = function()
+        local rs = game:GetService("ReplicatedStorage")
+        while wait(0.68) do
+            rs.RemoteEvent.AddPowerEvent:FireServer("FromTraining", 10)
+            wait(0.68)
+            rs.RemoteEvent.AddPowerEvent:FireServer("FromTraining", 9.99)
+        end
+    end,
+ })
+ local Input = Tab:CreateInput({
+    Name = "[] Set Trainrate",
+    PlaceholderText = "Trainrate",
+    RemoveTextAfterFocusLost = false,
+    Callback = function(Text)
+    -- The function that takes place when the input is changed
+    -- The variable (Text) is a string for the value in the text box
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] AntiAFK",
+    Callback = function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/RTrade/Voidz/main/AntiAFK.lua'),true))()
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] DestroyTrainingAnim",
+    Callback = function()
+        local LocalPlayer = game.Players.LocalPlayer
+        local backpack = LocalPlayer.Backpack
+        local toolName = "Train"
+        
+        local function deleteLocalScript()
+            local tool = backpack:FindFirstChild(toolName)
+            if tool then
+                for _, descendant in ipairs(tool:GetDescendants()) do
+                    if descendant:IsA("LocalScript") then
+                        descendant:Destroy()
+                    end
+                end
+            else
+                print(toolName .. " not found in your backpack.")
+            end
+        end
+        
+        deleteLocalScript()
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] AutoEquipTrainingSword",
+    Callback = function()
+        while true do
+            wait(.5)
+            for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+                if v.Name == "Train" then
+                    v.Parent = game.Players.LocalPlayer.Character
+                end
+            end
+        end
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] Respawn",
+    Callback = function()
+        game:GetService("ReplicatedStorage").RemoteEvent.SpawnCharacterEvent:FireServer("MainSpawn")
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] AuraSpam",
+    Callback = function()
+       _G.SPAM = true
+while _G.SPAM do
+    game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):WaitForChild("AuraEvent"):FireServer("Turn On")
+    wait()
+end    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] GetFF",
+    Callback = function()
+        local beforepos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        local ff = game.Players.LocalPlayer.Character:FindFirstChild("ForceField")
+        
+        if not ff then
+            repeat
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(70,98,-335)
+                wait(0.1)
+            until game.Players.LocalPlayer.Character:FindFirstChild("ForceField")
+        else
+            return
+        end
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = beforepos
+    end,
+ })
+
+ local Tab = Window:CreateTab("Other")
+ local Button = Tab:CreateButton({
+    Name = "[] SilentAim",
+    Callback = function()
+        local ScreenGui2 = {
+            ScreenGui2 = Instance.new("ScreenGui"),
+            CommandBarFrame = Instance.new("Frame"),
+            CommandBar = Instance.new("TextBox"),
+            CommandBarCorner = Instance.new("UICorner"),
+        }
+        
+        
+        ScreenGui2.ScreenGui2.Name = "ScreenGui2"
+        ScreenGui2.ScreenGui2.Parent = game:GetService("CoreGui")
+        ScreenGui2.ScreenGui2.ResetOnSpawn = false
+        ScreenGui2.ScreenGui2.ZIndexBehavior = Enum.ZIndexBehavior.Global
+        
+        ScreenGui2.CommandBarFrame.Name = "CommandBarFrame"
+        ScreenGui2.CommandBarFrame.Parent = ScreenGui2.ScreenGui2
+        ScreenGui2.CommandBarFrame.AnchorPoint = Vector2.new(0.5, 0)
+        ScreenGui2.CommandBarFrame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+        ScreenGui2.CommandBarFrame.Position = UDim2.new(0.5, 0, 1, 0)
+        ScreenGui2.CommandBarFrame.Size = UDim2.new(0.0933617353, 0, 0.0327022374, 0)
+        ScreenGui2.CommandBarFrame.BackgroundTransparency = 1
+        
+        ScreenGui2.CommandBar.Name = "CommandBar"
+        ScreenGui2.CommandBar.Parent = ScreenGui2.CommandBarFrame
+        ScreenGui2.CommandBar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        ScreenGui2.CommandBar.BackgroundTransparency = 1.000
+        ScreenGui2.CommandBar.Size = UDim2.new(1, 0, 1, 0)
+        ScreenGui2.CommandBar.ClearTextOnFocus = false
+        ScreenGui2.CommandBar.Font = Enum.Font.Gotham
+        ScreenGui2.CommandBar.Text = ""
+        ScreenGui2.CommandBar.TextColor3 = Color3.fromRGB(255, 255, 255)
+        ScreenGui2.CommandBar.TextScaled = true
+        ScreenGui2.CommandBar.TextSize = 14.000
+        ScreenGui2.CommandBar.TextWrapped = true
+        
+        ScreenGui2.CommandBarCorner.Parent = ScreenGui2.CommandBarFrame
+        
+        
+        
+        local Players = game:GetService("Players")
+        local RunService = game:GetService("RunService")
+        local CurrentCamera = workspace:WaitForChild("Camera")
+        local UserInputService = game:GetService("UserInputService")
+        local GuiService = game:GetService("GuiService")
+        local plr = Players.LocalPlayer
+        local mouse = plr:GetMouse()
+        local target = nil
+        local player = nil
+        local lock = false
+        local commandbarvisible = false
+        local HRPLock = false
+        local HRPLocking = false
+        local prefix = "."
+        local WhitelistedPlayers = {}
+        local commands = {}
+        
+        local HRPSettings = {
+            HRP_Player = nil;
+            HRP_Position = nil;
+            HRP_Part = "HumanoidRootPart";
+            Draw_HRP = HRPLock;
+            HRP_Radius = 5;
+            HRP_Color = Color3.fromRGB(0,255,0);
+            HRP_UnselectedTransparency = 0.5;
+            HRP_SelectedTransparency = 0.8;
+        }
+        local FOVsettings = {
+            FOV_Player;
+            FOV_Position = nil;
+            AimPart = "Head";
+            TeamCheck = false;
+            Draw_FOV = FOVLock;
+            FOV_Radius = 200;
+            FOV_Color = Color3.fromRGB(255,255,255);
+        }
+        
+        local hrpcircle = Drawing.new("Circle")
+        hrpcircle.Visible = HRPSettings.Draw_HRP
+        hrpcircle.Radius = HRPSettings.HRP_Radius
+        hrpcircle.Color = HRPSettings.HRP_Color
+        hrpcircle.Thickness = 1
+        hrpcircle.Filled = true
+        hrpcircle.Transparency = HRPSettings.HRP_UnselectedTransparency
+        hrpcircle.Position = Vector2.new(0,0)
+        
+        local function chat(message)
+            game.StarterGui:SetCore("ChatMakeSystemMessage", {Text = message, Color = Color3.fromRGB(0,255,0), Font = Enum.Font.Fantasy})
+        end
+        
+        local function GetPlayer(sender,text)
+            if text == "" then
+                return nil
+            end
+            if text == "all" then
+                return "all"
+            end
+            for _,Player in pairs(Players:GetPlayers()) do
+                if string.sub(string.lower(Player.Name),1,string.len(text)) == string.lower(text) then
+                    return Player
+                elseif string.sub(string.lower(Player.DisplayName),1,string.len(text)) == string.lower(text) then
+                    return Player
+                end
+            end
+            return nil
+        end
+        
+        function CreateTween(object, info, args, play)
+            local tween = game:GetService("TweenService"):Create(object, info, args)
+            if play == "NoWait" or play == true then
+                tween:Play()
+                tween.Completed:Connect(function()
+                    tween:Destroy()
+                end)
+                return
+            elseif play == "Wait" then
+                tween:Play()
+                tween.Completed:Wait()
+                tween:Destroy()
+                return
+            end
+            return tween
+        end
+        
+        function ClosestTPToCursor()
+            local ClosestChar = nil
+            local ClosestPart = nil
+            local ClosestPartPosition = nil
+            local ClosestPartOnScreen = false
+            local ClosestPartMagnitudeFromMouse = nil
+            local ShortestDistance = math.huge
+            for i,v in ipairs(Players:GetPlayers()) do
+                local char = v.Character
+                if char then
+                    if v ~= Players.LocalPlayer and not table.find(WhitelistedPlayers,v.Name) then
+                        local TargetPart = char:FindFirstChild(FOVsettings.AimPart)
+                        if TargetPart then
+                            local PartPos, onScreen = CurrentCamera.WorldToViewportPoint(CurrentCamera, TargetPart.Position)
+                            if onScreen then
+                                local Magnitude = (Vector2.new(PartPos.X, PartPos.Y) - Vector2.new(mouse.X, mouse.Y + GuiService.GetGuiInset(GuiService).Y)).Magnitude
+                                if (Magnitude < ShortestDistance) then
+                                    ClosestChar = char
+                                    ClosestPart = TargetPart
+                                    ClosestPartPosition = PartPos
+                                    ClosestPartOnScreen = onScreen
+                                    ClosestPartMagnitudeFromMouse = Magnitude
+                                    ShortestDistance = Magnitude
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+            return ClosestChar, ClosestPart, ClosestPartPosition, ClosestPartOnScreen, ClosestPartMagnitudeFromMouse
+        end
+        
+        function ClosestHRPPlayer()
+            local target = nil
+            local TargetChar, TargetPartTemp, PartPos, onScreen, Magnitude = ClosestTPToCursor()
+            target = TargetChar
+            return Players:GetPlayerFromCharacter(target)
+        end
+        
+        RunService.Heartbeat:Connect(function()
+            if HRPLock == true then
+                if HRPSettings.HRP_Player == nil then
+                    if ClosestHRPPlayer() ~= nil and ClosestHRPPlayer().Character then
+                        local hrpplayer = ClosestHRPPlayer().Character
+                        local vector, onscreen = CurrentCamera:WorldToViewportPoint(hrpplayer:FindFirstChild(HRPSettings.HRP_Part).Position)
+                        if hrpcircle.Transparency ~= HRPSettings.HRP_UnselectedTransparency then
+                            hrpcircle.Transparency = HRPSettings.HRP_UnselectedTransparency
+                        end
+                        if onscreen == true then
+                            if hrpcircle.Visible == false then
+                                hrpcircle.Visible = true
+                            end
+                            hrpcircle.Position = Vector2.new(vector.X,vector.Y)
+                        elseif onscreen == false then
+                            hrpcircle.Visible = false
+                        end
+                    else
+                        hrpcircle.Visible = false
+                    end
+                elseif HRPSettings.HRP_Player ~= nil and HRPSettings.HRP_Player.Character then
+                    local enemy = HRPSettings.HRP_Player.Character
+                    local vector, onscreen = CurrentCamera:WorldToViewportPoint(enemy:FindFirstChild(HRPSettings.HRP_Part).Position)
+                    if hrpcircle.Transparency ~= HRPSettings.HRP_SelectedTransparency then
+                        hrpcircle.Transparency = HRPSettings.HRP_SelectedTransparency
+                    end
+                    if onscreen then
+                        if hrpcircle.Visible == false then
+                            hrpcircle.Visible = true
+                        end
+                        hrpcircle.Position = Vector2.new(vector.X,vector.Y)
+                    elseif onscreen == false then
+                        hrpcircle.Visible = false
+                    end
+                else
+                    hrpcircle.Visible = false
+                end
+            elseif HRPLock == false then
+                if hrpcircle.Visible ~= false then
+                    hrpcircle.Visible = false
+                end
+            end
+        end)
+        
+        UserInputService.InputBegan:Connect(function(input, processed)
+            if input.KeyCode == Enum.KeyCode.Quote then
+                local textbox = ScreenGui2.CommandBar
+                local frame = ScreenGui2.CommandBarFrame
+                if commandbarvisible == false then
+                    CreateTween(frame,TweenInfo.new(0.2,Enum.EasingStyle.Quad),{Position = UDim2.new(0.5,0,0.9,0)},true)
+                    CreateTween(frame,TweenInfo.new(0.2,Enum.EasingStyle.Quad),{BackgroundTransparency = 0},true)
+                    textbox:CaptureFocus()
+                    task.wait()
+                    textbox.Text = ""
+                    commandbarvisible = true
+                end
+            end
+        end)
+        
+        ScreenGui2.CommandBar.FocusLost:Connect(function()
+            if commandbarvisible == true then
+                ScreenGui2.CommandBar.Text = ""
+                CreateTween(ScreenGui2.CommandBarFrame,TweenInfo.new(0.2,Enum.EasingStyle.Quad),{Position = UDim2.new(0.5,0,1,0)},true)
+                CreateTween(ScreenGui2.CommandBarFrame,TweenInfo.new(0.2,Enum.EasingStyle.Quad),{BackgroundTransparency = 1},true)
+                commandbarvisible = false
+            end
+        end)
+        
+        UserInputService.InputBegan:Connect(function(input, processed)
+            if input.KeyCode == Enum.KeyCode.E and not processed then
+                if HRPSettings.HRP_Player == nil and ClosestHRPPlayer() ~= nil and ClosestHRPPlayer().Character then
+                    HRPLocking = true
+                    if not HRPLock then return end
+                    local lockplr = ClosestHRPPlayer()
+                    HRPSettings.HRP_Player = lockplr
+                elseif HRPSettings.HRP_Player ~= nil then
+                    HRPLocking = false
+                    if not HRPLock then return end
+                    HRPSettings.HRP_Player = nil
+                end
+            elseif input.KeyCode == Enum.KeyCode.Z and not processed then
+                HRPLock = not HRPLock
+                hrpcircle.Visible = HRPLock
+            elseif input.KeyCode == Enum.KeyCode.Q and not processed then
+                if lock == false then
+                    lock = false
+                    task.wait()
+                    lock = true
+                    while lock do
+                        if HRPSettings.HRP_Player and HRPSettings.HRP_Player.Character and HRPSettings.HRP_Player.Character:FindFirstChild("Head") and Players.LocalPlayer.Character and Players.LocalPlayer.Character:FindFirstChild("Shuriken") and Players.LocalPlayer.Character:FindFirstChild("Shuriken"):FindFirstChild("HitEvent") then
+                            Players.LocalPlayer.Character:FindFirstChild("Shuriken"):FindFirstChild("HitEvent"):FireServer(HRPSettings.HRP_Player.Character:FindFirstChild("Head").Position)
+                        end
+                        task.wait()
+                    end
+                else
+                    lock = false
+                end
+            end
+        end)
+        
+        Players.PlayerRemoving:Connect(function(plrremoved)
+            if plrremoved == HRPSettings.HRP_Player then
+                HRPSettings.HRP_Player = nil
+            end
+        end)
+        
+        commands.lock = function(sender,args)
+            local player = GetPlayer(sender,args[1])
+            if player ~= nil then
+                HRPSettings.HRP_Player = player
+            end
+        end
+        
+        commands.fire = function(sender,args)
+            lock = false
+            task.wait()
+            lock = true
+            while lock do
+                if HRPSettings.HRP_Player and HRPSettings.HRP_Player.Character and HRPSettings.HRP_Player.Character:FindFirstChild("Head") and Players.LocalPlayer.Character and Players.LocalPlayer.Character:FindFirstChild("Shuriken") and Players.LocalPlayer.Character:FindFirstChild("Shuriken"):FindFirstChild("HitEvent") then
+                    Players.LocalPlayer.Character:FindFirstChild("Shuriken"):FindFirstChild("HitEvent"):FireServer(HRPSettings.HRP_Player.Character:FindFirstChild("Head"))
+                elseif HRPSettings.HRP_Player == nil then
+                    lock = false
+                end
+                task.wait()
+            end
+        end
+        
+        commands.unfire = function(sender,args)
+            lock = false
+        end
+        
+        commands.whitelist = function(sender,args)
+            if not GetPlayer(sender,args[1]) then chat("Server: Player does not exist") return end
+            local player = GetPlayer(sender,args[1])
+            if table.find(WhitelistedPlayers,player.Name) then chat("Server: "..player.Name.." is already in Whitelist") return end
+            table.insert(WhitelistedPlayers,player.Name)
+            chat("Server: Added "..player.Name.." to the Whitelist")
+        end
+        
+        commands.wl = function(sender,args)
+            if not GetPlayer(sender,args[1]) then chat("Server: Player does not exist") return end
+            local player = GetPlayer(sender,args[1])
+            if table.find(WhitelistedPlayers,player.Name) then chat("Server: "..player.Name.." is already in Whitelist") return end
+            table.insert(WhitelistedPlayers,player.Name)
+            chat("Server: Added "..player.Name.." to the Whitelist")
+        end
+        
+        commands.unwhitelist = function(sender,args)
+            if not GetPlayer(sender,args[1]) then chat("Server: Player does not exist") return end
+            local player = GetPlayer(sender,args[1])
+            if table.find(WhitelistedPlayers,player.Name) then
+                table.remove(WhitelistedPlayers,table.find(WhitelistedPlayers,player.Name))
+                chat("Server: "..player.Name.." has been removed from Whitelist")
+            else
+                chat("Server: "..player.Name.." is not in the Whitelist")
+            end
+        end
+        
+        commands.unwl = function(sender,args)
+            if not GetPlayer(sender,args[1]) then chat("Server: Player does not exist") return end
+            local player = GetPlayer(sender,args[1])
+            if table.find(WhitelistedPlayers,player.Name) then
+                table.remove(WhitelistedPlayers,table.find(WhitelistedPlayers,player.Name))
+                chat("Server: "..player.Name.." has been removed from Whitelist")
+            else
+                chat("Server: "..player.Name.." is not in the Whitelist")
+            end
+        end
+        
+        Players.LocalPlayer.Chatted:Connect(function(msg)
+            msg = string.lower(msg)
+            local splitstring = msg:split(" ")
+            local slashcommand
+            if splitstring[1] == "/e" then
+                slashcommand = splitstring[2]
+            else
+                slashcommand = splitstring[1]
+            end
+            local cmd = slashcommand:split(prefix)
+            local cmdname = cmd[2]
+            if commands[cmdname] then
+                local arguments = {}
+                if splitstring[1] == "/e" then
+                    for i = 3, #splitstring, 1 do
+                        table.insert(arguments,splitstring[i])
+                    end
+                else
+                    for i = 2, #splitstring, 1 do
+                        table.insert(arguments,splitstring[i])
+                    end
+                end
+                commands[cmdname](Players.LocalPlayer,arguments)
+            end
+        end)
+        
+        ScreenGui2.CommandBar.FocusLost:Connect(function()
+            local msg = ScreenGui2.CommandBar.Text
+            msg = string.lower(msg)
+            local splitstring = msg:split(" ")
+            local slashcommand = splitstring[1]
+            if commands[slashcommand] then
+                local arguments = {}
+                for i = 2, #splitstring, 1 do
+                    table.insert(arguments,splitstring[i])
+                end
+                commands[slashcommand](Players.LocalPlayer,arguments)
+            end
+        end)
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] RemovePlayerTorso",
+    Callback = function()
+        game.Players.LocalPlayer.Character.UpperTorso.Waist:Remove()
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] RainbowShurikens",
+    Callback = function()
+        while true do
+            wait(0.01)
+            game.ReplicatedStorage.RemoteEvent.GiveItemEvent:FireServer("Shuriken", "Shuriken1")
+            wait(0.01)
+            game.ReplicatedStorage.RemoteEvent.GiveItemEvent:FireServer("Shuriken", "Shuriken2")
+            wait(0.01)
+            game.ReplicatedStorage.RemoteEvent.GiveItemEvent:FireServer("Shuriken", "Shuriken3")
+            wait(0.01)
+            game.ReplicatedStorage.RemoteEvent.GiveItemEvent:FireServer("Shuriken", "Shuriken4")
+            wait(0.01)
+            game.ReplicatedStorage.RemoteEvent.GiveItemEvent:FireServer("Shuriken", "Shuriken5")
+            wait(0.01)
+            game.ReplicatedStorage.RemoteEvent.GiveItemEvent:FireServer("Shuriken", "Shuriken6")
+            wait(0.01)
+            game.ReplicatedStorage.RemoteEvent.GiveItemEvent:FireServer("Shuriken", "Shuriken7")
+            wait(0.01)
+            game.ReplicatedStorage.RemoteEvent.GiveItemEvent:FireServer("Shuriken", "Shuriken8Ying")
+            wait(0.01)
+            game.ReplicatedStorage.RemoteEvent.GiveItemEvent:FireServer("Shuriken", "Shuriken8Yang")
+            wait(0.01)
+            game.ReplicatedStorage.RemoteEvent.GiveItemEvent:FireServer("Shuriken", "Shuriken9Ying")
+            wait(0.01)
+            game.ReplicatedStorage.RemoteEvent.GiveItemEvent:FireServer("Shuriken", "Shuriken9Yang")
+            wait(0.01)end
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] RainbowClothes [YIN]",
+    Callback = function()
+        while true do
+            wait(0.01)
+            game.ReplicatedStorage.RemoteEvent.GiveItemEvent:FireServer("Cloth", "Ying12")
+            wait(0.01)
+            game.ReplicatedStorage.RemoteEvent.GiveItemEvent:FireServer("Cloth", "Ying13")
+            wait(0.01)
+            game.ReplicatedStorage.RemoteEvent.GiveItemEvent:FireServer("Cloth", "Ying14")
+            wait(0.01)
+            game.ReplicatedStorage.RemoteEvent.GiveItemEvent:FireServer("Cloth", "Ying15")
+            wait(0.01)
+            game.ReplicatedStorage.RemoteEvent.GiveItemEvent:FireServer("Cloth", "Ying16")
+            wait(0.01)
+            game.ReplicatedStorage.RemoteEvent.GiveItemEvent:FireServer("Cloth", "Ying17")
+            wait(0.01)
+            game.ReplicatedStorage.RemoteEvent.GiveItemEvent:FireServer("Cloth", "Ying18")
+            wait(0.01)end
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] RainbowClothes [YANG]",
+    Callback = function()
+        while true do
+            wait(0.01)
+            game.ReplicatedStorage.RemoteEvent.GiveItemEvent:FireServer("Cloth", "Yang12")
+            wait(0.01)
+            game.ReplicatedStorage.RemoteEvent.GiveItemEvent:FireServer("Cloth", "Yang13")
+            wait(0.01)
+            game.ReplicatedStorage.RemoteEvent.GiveItemEvent:FireServer("Cloth", "Yang14")
+            wait(0.01)
+            game.ReplicatedStorage.RemoteEvent.GiveItemEvent:FireServer("Cloth", "Yang15")
+            wait(0.01)
+            game.ReplicatedStorage.RemoteEvent.GiveItemEvent:FireServer("Cloth", "Yang16")
+            wait(0.01)
+            game.ReplicatedStorage.RemoteEvent.GiveItemEvent:FireServer("Cloth", "Yang17")
+            wait(0.01)
+            game.ReplicatedStorage.RemoteEvent.GiveItemEvent:FireServer("Cloth", "Yang18")
+            wait(0.01)end
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] YinShuriken [1.5MIL]",
+    Callback = function()
+        local args = {
+            [1] = "Shuriken",
+            [2] = "Shuriken9Ying"
+        }
+    
+        game:GetService("ReplicatedStorage").RemoteEvent.GiveItemEvent:FireServer(unpack(args))
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] YangShuriken [1.5MIL]",
+    Callback = function()
+        local args = {
+            [1] = "Shuriken",
+            [2] = "Shuriken9Yang"
+        }
+    
+        game:GetService("ReplicatedStorage").RemoteEvent.GiveItemEvent:FireServer(unpack(args))
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] YinSword [10MIL]",
+    Callback = function()
+        game:GetService("ReplicatedStorage").RemoteEvent.GiveItemEvent:FireServer("Sword","UltraKatana")
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] YangSword [10MIL]",
+    Callback = function()
+        game:GetService("ReplicatedStorage").RemoteEvent.GiveItemEvent:FireServer("Sword","BlackAndWhiteWingedSword")
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] InfiniteYield",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/DarkNetworks/Infinite-Yield/main/latest.lua'))()
+    end,
+ })
+
+ local Section = Tab:CreateSection("<>")
+ local Button = Tab:CreateButton({
+    Name = "[] Spawn 10 Tools",
+    Callback = function()
+        for i=1, 10 do -- incase i forget / increase or decrease
+            spawn(function()
+              wait()
+            game:GetService("ReplicatedStorage").RemoteEvent.SpawnCharacterEvent:FireServer("MainSpawn")
+            end)
+            end
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] Spawn 50 Tools",
+    Callback = function()
+        for i=1, 50 do -- incase i forget / increase or decrease
+            spawn(function()
+              wait()
+            game:GetService("ReplicatedStorage").RemoteEvent.SpawnCharacterEvent:FireServer("MainSpawn")
+            end)
+            end
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] Spawn 100 Tools",
+    Callback = function()
+        for i=1, 100 do -- incase i forget / increase or decrease
+            spawn(function()
+              wait()
+            game:GetService("ReplicatedStorage").RemoteEvent.SpawnCharacterEvent:FireServer("MainSpawn")
+            end)
+            end
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] Spawn 300 Tools",
+    Callback = function()
+        for i=1, 300 do -- incase i forget / increase or decrease
+            spawn(function()
+              wait()
+            game:GetService("ReplicatedStorage").RemoteEvent.SpawnCharacterEvent:FireServer("MainSpawn")
+            end)
+            end
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] Spawn 500 Tools",
+    Callback = function()
+        for i=1, 500 do -- incase i forget / increase or decrease
+            spawn(function()
+              wait()
+            game:GetService("ReplicatedStorage").RemoteEvent.SpawnCharacterEvent:FireServer("MainSpawn")
+            end)
+            end
+    end,
+ })
+
+
+ local Tab = Window:CreateTab("Server")
+ local Button = Tab:CreateButton({
+    Name = "[] RemoveFog",
+    Callback = function()
+        game.Lighting.FogEnd = 100000
+        game.Lighting.FogStart = 100000
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] ChatSpy",
+    Callback = function()
+    --[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+--This script reveals ALL hidden messages in the default chat
+
+enabled = true --chat "/spy" to toggle!
+spyOnMyself = true --if true will check your messages too
+public = false --if true will chat the logs publicly (fun, risky)
+publicItalics = true --if true will use /me to stand out
+privateProperties = { --customize private logs
+	Color = Color3.fromRGB(0,255,255); 
+	Font = Enum.Font.SourceSansBold;
+	TextSize = 18;
+}
+
+
+local StarterGui = game:GetService("StarterGui")
 local Players = game:GetService("Players")
-local UserInputService = game:GetService("UserInputService")
-local Player = Players.LocalPlayer
-local Character = Players.LocalPlayer.Character or Players.LocalPlayer.CharacterAdded:Wait()
-local NHMouse = Players.LocalPlayer:GetMouse()
-local RunService = game:GetService("RunService")
-local filename = "Ninja Hub v4.1.0 Settings.txt"
-local Main = NAHub
-local FunctionTable = {}
-local commands = {}
-local totalTime = 0
-local sessionNin = 0
-local lastVal = game.Players.LocalPlayer.leaderstats.Ninjutsu.Value
-local charrespawning = false
-local destroyingts = false
-local respos = nil
-local safespotpos = nil
-local VariableTable = {
-    ['AutoTrain'] = false;
-    ['AutoEquip'] = false;
-    ['SeatESP'] = false;
-    ['NoTS'] = false;
-    ['AutoRespawn'] = false;
-    ['AntiAfk'] = false;
-    ['Noclip'] = false;
-    ['Freeze'] = false;
-    ['NoFF'] = false;
-    ['SafeSpot'] = false;
-    ['TrainRate'] = 0.7;
-    ['TrainAmount'] = 20;
-}
-local OptionTable = {
-    ['InvisTrain'] = false
-}
+local player = Players.LocalPlayer or Players:GetPropertyChangedSignal("LocalPlayer"):Wait() or Players.LocalPlayer
+local saymsg = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest")
+local getmsg = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("OnMessageDoneFiltering")
+local instance = (_G.chatSpyInstance or 0) + 1
+_G.chatSpyInstance = instance
 
-
-
-commands.invistrain = function(sender,args)
-    OptionTable['InvisTrain'] = true
-    pcall(function()
-        if VariableTable['NoTS'] == true then
-            if not Players.LocalPlayer.Character then return end
-            local trainingSword = Players.LocalPlayer.Backpack:FindFirstChild("Train") or Players.LocalPlayer.Character:FindFirstChild("Train")
-            if not trainingSword then print("No training sword") return end
-            trainingSword:FindFirstChild("Handle").Transparency = 1
-            trainingsword:FindFirstChild("Handle"):FindFirstChild("Mesh").Parent = BackupsFolder.TrainingChildren
-        end
-    end)
-end
-
-commands.vistrain = function(sender,args)
-    OptionTable['InvisTrain'] = false
-    pcall(function()
-        if VariableTable['NoTS'] == true then
-            if not Players.LocalPlayer.Character then return end
-            local trainingSword = Players.LocalPlayer.Backpack:FindFirstChild("Train") or Players.LocalPlayer.Character:FindFirstChild("Train")
-            if not trainingSword then print("No training sword") return end
-            trainingSword:FindFirstChild("Handle").Transparency = 0
-            BackupsFolder.TrainingChildren:FindFirstChild("Mesh").Parent = trainingSword:FindFirstChild("Handle")
-        end
-    end)
-end
-
-
-FunctionTable['comma_value'] = function(n)
-    if tonumber(n) then
-    	local left,num,right = string.match(n,'^([^%d]*%d)(%d*)(.-)$')
-    	return left..(num:reverse():gsub('(%d%d%d)','%1,'):reverse())..right
-    else
-        return n
-    end
-end
-
-FunctionTable['format'] = function(val)
-    local suffixes = {'','K+','M+','B+','T+','qd+','Qn+','sx+','Sp+','O+','N+','de+','Ud+','DD+','tdD+','qdD+','QnD+','sxD+','SpD+','OcD+','NvD+','Vgn+','UVg+','DVg+','TVg+','qtV+','QnV+','SeV+','SPG+','OVG+','NVG+','TGN+','UTG+','DTG+','tsTG+','qtTG+','QnTG+','ssTG+','SpTG+','OcTG+','NoAG+','UnAG+','DuAG+','TeAG+','QdAG+','QnAG+','SxAG+','SpAG+','OcAG+','NvAG+','CT+'}
-    for i=1, #suffixes do
-		if tonumber(val) < 10^(i*3) then
-			return math.floor(val/((10^((i-1)*3))/100))/(100)..suffixes[i]
+local function onChatted(p,msg)
+	if _G.chatSpyInstance == instance then
+		if p==player and msg:lower():sub(1,4)=="/spy" then
+			enabled = not enabled
+			wait(0.3)
+			privateProperties.Text = "{SPY "..(enabled and "EN" or "DIS").."ABLED}"
+			StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+		elseif enabled and (spyOnMyself==true or p~=player) then
+			msg = msg:gsub("[\n\r]",''):gsub("\t",' '):gsub("[ ]+",' ')
+			local hidden = true
+			local conn = getmsg.OnClientEvent:Connect(function(packet,channel)
+				if packet.SpeakerUserId==p.UserId and packet.Message==msg:sub(#msg-#packet.Message+1) and (channel=="All" or (channel=="Team" and public==false and Players[packet.FromSpeaker].Team==player.Team)) then
+					hidden = false
+				end
+			end)
+			wait(1)
+			conn:Disconnect()
+			if hidden and enabled then
+				if public then
+					saymsg:FireServer((publicItalics and "/me " or '').."{SPY} [".. p.Name .."]: "..msg,"All")
+				else
+					privateProperties.Text = "{SPY} [".. p.Name .."]: "..msg
+					StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+				end
+			end
 		end
 	end
 end
 
-FunctionTable['TimeFormat'] = function(Int)
-    return string.format("%02i", Int)
+for _,p in ipairs(Players:GetPlayers()) do
+	p.Chatted:Connect(function(msg) onChatted(p,msg) end)
 end
-
-FunctionTable['ConvertToDHM'] = function(value)
-    local minutes = math.floor(value / 60)
-    local hours = math.floor((value / 60) / 60)
-    local days = math.floor(((value / 60) / 60) / 24)
-    minutes = minutes - (hours * 60)
-    hours = hours - (days * 24)
-	return FunctionTable['TimeFormat'](days)..":"..FunctionTable['TimeFormat'](hours)..":"..FunctionTable['TimeFormat'](minutes)
-end
-
-FunctionTable['CreateTween'] = function(object,info,args,play,destroyfunc)
-    local tween = game:GetService("TweenService"):Create(object, info, args)
-	if play == "NoWait" or play == true then
-		tween:Play()
-		tween.Completed:Connect(function()
-			tween:Destroy()
-            if destroyfunc then
-                destroyfunc()
-            end
-		end)
-		return
-	elseif play == "Wait" then
-		tween:Play()
-		tween.Completed:Wait()
-		tween:Destroy()
-		return
-	end
-	return tween
-end
-
-FunctionTable['getroot'] = function(char)
-    local rootPart = char:FindFirstChild('HumanoidRootPart') or char:FindFirstChild('Torso') or char:FindFirstChild('UpperTorso')
-    return rootPart
-end
-
-FunctionTable['SetButton'] = function(bool)
-    if bool == true then
-        local ButtonTab = {Color3.fromRGB(0,255,0),"On"}
-        return ButtonTab
-    elseif bool == false then
-        local ButtonTab = {Color3.fromRGB(255,0,0),"Off"}
-        return ButtonTab
-    end
-end
-
-FunctionTable['FindButton'] = function(text)
-    for i,v in pairs(Main.AdminFrame.MidBar.MainFrame:GetDescendants()) do
-        if v:IsA("TextButton") or v:IsA("TextBox") then
-            if v.Name == "TextButton" or v.Name == "TextBox" then
-                if v.Parent:FindFirstChild("TextLabel") then
-                    local TextLabel = string.sub(v.Parent:FindFirstChild("TextLabel").Text,1,string.len(v.Parent:FindFirstChild("TextLabel").Text) - 1)
-                    if TextLabel == text then
-                        return v
-                    end
-                end
-            end
-        end
-    end
-    return nil
-end
-
-FunctionTable.VariableFunctions = {
-    ['AutoTrain'] = function()
-        if VariableTable['AutoTrain'] == true then
-            task.spawn(function()
-                while VariableTable['AutoTrain'] == true do
-                    game:GetService("ReplicatedStorage").RemoteEvent.AddPowerEvent:FireServer("FromTraining",VariableTable['TrainAmount'])
-                    task.wait(VariableTable['TrainRate'])
-                    game:GetService("ReplicatedStorage").RemoteEvent.AddPowerEvent:FireServer("FromTraining",VariableTable['TrainAmount'] - 0.001)
-                    task.wait(VariableTable['TrainRate'])
-                end
-            end)
-        end
-    end;
-    ['AutoEquip'] = function()
-        if VariableTable['AutoEquip'] == true then
-            task.spawn(function()
-                while VariableTable['AutoEquip'] == true do
-                    if Players.LocalPlayer.Character and charrespawning == false and destroyingts == false then
-                        if not Players.LocalPlayer.Character:FindFirstChild("Train") then
-                            if Players.LocalPlayer.Backpack:FindFirstChild("Train") then
-                                Players.LocalPlayer.Backpack:FindFirstChild("Train").Parent = Players.LocalPlayer.Character
-                            end
-                        end
-                    end
-                    task.wait()
-                end
-            end)
-        end
-    end;
-    ['NoTS'] = function()
-        if VariableTable['NoTS'] == true then
-            destroyingts = true
-            if Players.LocalPlayer.Character then
-                if Players.LocalPlayer.Character:FindFirstChild("Train") and Players.LocalPlayer.Character:FindFirstChild("Humanoid") then
-                    Players.LocalPlayer.Character:FindFirstChild("Humanoid"):UnequipTools()
-                end
-            end
-            if Players.LocalPlayer:FindFirstChild("Backpack") and Players.LocalPlayer:FindFirstChild("Backpack"):FindFirstChild("Train") then
-                for i,v in pairs(Players.LocalPlayer:FindFirstChild("Backpack"):FindFirstChild("Train"):GetDescendants()) do
-                    if not BackupsFolder:FindFirstChild("TrainChildren") then local TrainChildren = Instance.new("Folder",BackupsFolder) TrainChildren.Name = "TrainChildren" end
-                    if OptionTable['InvisTrain'] == true then
-                        if v.Name ~= "Handle" and v.Name ~= "ValueCheck" then
-                            if v:IsA("Script") or v:IsA("LocalScript") or v:IsA("ModuleScript") then
-                                v.Enabled = false
-                                v:Destroy()
-                            else
-                                v.Parent = TrainChildren
-                            end
-                        elseif v.Name == "Handle" then
-                            v.Transparency = 1
-                        end
-                    elseif OptionTable['InvisTrain'] == false then
-                        if v.Name ~= "Handle" and v.Name ~= "ValueCheck" and v.Name ~= "Mesh" then
-                            if v:IsA("Script") or v:IsA("LocalScript") or v:IsA("ModuleScript") then
-                                v.Enabled = false
-                                v:Destroy()
-                            else
-                                v.Parent = TrainChildren
-                            end
-                        elseif v.Name == "Handle" then
-                            v.Transparency = 0
-                        end
-                    end
-                end
-            end
-            destroyingts = false
-        elseif VariableTable['NoTS'] == false then
-            if Players.LocalPlayer.Character and Players.LocalPlayer.Character:FindFirstChild("Humanoid") then
-                Players.LocalPlayer.Character:FindFirstChild("Humanoid").Health = 0
-                BackupsFolder.TrainChildren:ClearAllChildren()
-            end
-        end
-    end;
-    ['SeatESP'] = function()
-        if VariableTable['SeatESP'] == true then
-            for i,v in pairs(workspace:GetDescendants()) do
-                if v:IsA("Seat") then
-                    local a = Instance.new("BoxHandleAdornment")
-                    a.Name = "SeatESP"
-                    a.Parent = v
-                    a.Adornee = v
-                    a.AlwaysOnTop = true
-                    a.ZIndex = 10
-                    a.Size = v.Size
-                    a.Transparency = 0.2
-                    a.Color = BrickColor.new(1001)
-                end
-            end
-        elseif VariableTable['SeatESP'] == false then
-            for i,v in pairs(game.Workspace:GetDescendants()) do
-                if v:IsA("Seat") then
-                    if v:FindFirstChild("SeatESP") then
-                        v:FindFirstChild("SeatESP"):Destroy()
-                    end
-                end
-            end
-        end
-    end;
-    ['AutoRespawn'] = function()
-        if VariableTable['AutoRespawn'] == false then
-            respos = nil
-        end
-    end;
-    ['AntiAfk'] = function()
-        Players.LocalPlayer.Idled:Connect(function()
-            if VariableTable['AntiAfk'] == true then
-                local VirtualUser = game:GetService("VirtualUser")
-                VirtualUser:CaptureController()
-                VirtualUser:ClickButton2(Vector2.new())
-            end
+Players.PlayerAdded:Connect(function(p)
+	p.Chatted:Connect(function(msg) onChatted(p,msg) end)
+end)
+privateProperties.Text = "{SPY "..(enabled and "EN" or "DIS").."ABLED}"
+StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+if not player.PlayerGui:FindFirstChild("Chat") then wait(3) end
+local chatFrame = player.PlayerGui.Chat.Frame
+chatFrame.ChatChannelParentFrame.Visible = true
+chatFrame.ChatBarParentFrame.Position = chatFrame.ChatChannelParentFrame.Position+UDim2.new(UDim.new(),chatFrame.ChatChannelParentFrame.Size.Y)
+    end,
+ })
+ local Section = Tab:CreateSection("<>")
+ local Button = Tab:CreateButton({
+    Name = "[] Chat Translator",
+    Callback = function()
+        loadstring(game:HttpGetAsync('https://i.qts.life/r/ChatInlineTranslator.lua', true))()
+        --[[
+        af = "Afrikaans",
+            sq = "Albanian",
+            am = "Amharic",
+            ar = "Arabic",
+            hy = "Armenian",
+            az = "Azerbaijani",
+            eu = "Basque",
+            be = "Belarusian",
+            bn = "Bengali",
+            bs = "Bosnian",
+            bg = "Bulgarian",
+            ca = "Catalan",
+            ceb = "Cebuano",
+            ny = "Chichewa",
+            ['zh-cn'] = "Chinese Simplified",
+            ['zh-tw'] = "Chinese Traditional",
+            co = "Corsican",
+            hr = "Croatian",
+            cs = "Czech",
+            da = "Danish",
+            nl = "Dutch",
+            en = "English",
+            eo = "Esperanto",
+            et = "Estonian",
+            tl = "Filipino",
+            fi = "Finnish",
+            fr = "French",
+            fy = "Frisian",
+            gl = "Galician",
+            ka = "Georgian",
+            de = "German",
+            el = "Greek",
+            gu = "Gujarati",
+            ht = "Haitian Creole",
+            ha = "Hausa",
+            haw = "Hawaiian",
+            iw = "Hebrew",
+            hi = "Hindi",
+            hmn = "Hmong",
+            hu = "Hungarian",
+            is = "Icelandic",
+            ig = "Igbo",
+            id = "Indonesian",
+            ga = "Irish",
+            it = "Italian",
+            ja = "Japanese",
+            jw = "Javanese",
+            kn = "Kannada",
+            kk = "Kazakh",
+            km = "Khmer",
+            ko = "Korean",
+            ku = "Kurdish (Kurmanji)",
+            ky = "Kyrgyz",
+            lo = "Lao",
+            la = "Latin",
+            lv = "Latvian",
+            lt = "Lithuanian",
+            lb = "Luxembourgish",
+            mk = "Macedonian",
+            mg = "Malagasy",
+            ms = "Malay",
+            ml = "Malayalam",
+            mt = "Maltese",
+            mi = "Maori",
+            mr = "Marathi",
+            mn = "Mongolian",
+            my = "Myanmar (Burmese)",
+            ne = "Nepali",
+            no = "Norwegian",
+            ps = "Pashto",
+            fa = "Persian",
+            pl = "Polish",
+            pt = "Portuguese",
+            pa = "Punjabi",
+            ro = "Romanian",
+            ru = "Russian",
+            sm = "Samoan",
+            gd = "Scots Gaelic",
+            sr = "Serbian",
+            st = "Sesotho",
+            sn = "Shona",
+            sd = "Sindhi",
+            si = "Sinhala",
+            sk = "Slovak",
+            sl = "Slovenian",
+            so = "Somali",
+            es = "Spanish",
+            su = "Sundanese",
+            sw = "Swahili",
+            sv = "Swedish",
+            tg = "Tajik",
+            ta = "Tamil",
+            te = "Telugu",
+            th = "Thai",
+            tr = "Turkish",
+            uk = "Ukrainian",
+            ur = "Urdu",
+            uz = "Uzbek",
+            vi = "Vietnamese",
+            cy = "Welsh",
+            xh = "Xhosa",
+            yi = "Yiddish",
+            yo = "Yoruba",
+            zu = "Zulu"
+        --]]
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] RejoinServer",
+    Callback = function()
+        game:GetService("TeleportService"):Teleport(placeId)
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] CrashServer",
+    Callback = function()
+        local RunService = game:GetService("RunService")
+        RunService.Heartbeat:Connect(function(step)  
+            game:GetService("ReplicatedStorage").RemoteEvent.SpawnCharacterEvent:FireServer("MainSpawn")
         end)
-    end;
-    ['Noclip'] = function()
-        if VariableTable['Noclip'] == true then
-            function NoclipLoop()
-                if Character then
-                    for i,v in pairs(Character:GetDescendants()) do
-                        if v:IsA("BasePart") and v.CanCollide == true then
-                            v.CanCollide = false
-                        end
-                    end
-                end
-            end
-            Noclipping = RunService.Stepped:Connect(NoclipLoop)
-        elseif VariableTable['Noclip'] == false then
-            if Noclipping ~= nil then
-                Noclipping:Disconnect()
-            end
-        end
-    end;
-    ['Freeze'] = function()
-        if VariableTable['Freeze'] == true then
-            for i,v in pairs(Character:GetChildren()) do
-                if v:IsA("BasePart") and v.Anchored ~= true then
-                    v.Anchored = true
-                end
-            end
-        elseif VariableTable['Freeze'] == false then
-            for i,v in pairs(Character:GetChildren()) do
-                if v:IsA("BasePart") and v.Anchored ~= false then
-                    v.Anchored = false
-                end
-            end
-        end
-    end;
-    ['NoFF'] = function()
-        if VariableTable['NoFF'] == true then
-            coroutine.resume(coroutine.create(function()
-                local weapon = 1
-                while VariableTable['NoFF'] == true do
-                    if Players.LocalPlayer.Character and Players.LocalPlayer.Character:FindFirstChildWhichIsA("ForceField") and charrespawning == false then
-                        if weapon == 1 and Players.LocalPlayer.Backpack:FindFirstChild("Sword") then
-                            Players.LocalPlayer.Backpack:FindFirstChild("Sword").Parent = Players.LocalPlayer.Character
-                            wait()
-                            if Players.LocalPlayer.Character:FindFirstChild("Sword") then
-                                Players.LocalPlayer.Character:FindFirstChild("Sword").Parent = Players.LocalPlayer.Backpack
-                            end
-                            weapon = 2
-                        elseif weapon == 2 and Players.LocalPlayer.Backpack:FindFirstChild("Shuriken") then
-                            Players.LocalPlayer.Backpack:FindFirstChild("Shuriken").Parent = Players.LocalPlayer.Character
-                            wait()
-                            if Players.LocalPlayer.Character:FindFirstChild("Shuriken") then
-                                Players.LocalPlayer.Character:FindFirstChild("Shuriken").Parent = Players.LocalPlayer.Backpack
-                            end
-                            weapon = 1
-                        end
-                    end
-                    task.wait()
-                end
-            end))
-        end
-    end;
-    ['SafeSpot'] = function()
-        if VariableTable['SafeSpot'] == true then
-            if Players.LocalPlayer.Character and FunctionTable['getroot'](Players.LocalPlayer.Character) then
-                safespotpos = Player.Character:FindFirstChild("HumanoidRootPart").CFrame
-                local safepart
-                if not workspace:FindFirstChild("SAFEPART_1") then
-                    safepart = Instance.new("Part",workspace)
-                    safepart.Name = "SAFEPART_1"
-                    safepart.CFrame = CFrame.new(0,100000,0)
-                    safepart.Anchored = true
-                    safepart.Size = Vector3.new(500,1,500)
-                    safepart.Color = Color3.fromRGB(99,95,98)
-                    safepart.Material = Enum.Material.Slate
-                else
-                    safepart = workspace:FindFirstChild("SAFEPART_1")
-                end
-                FunctionTable['getroot'](Players.LocalPlayer.Character).CFrame = safepart.CFrame + Vector3.new(0,2,0)
-            end
-        elseif VariableTable['SafeSpot'] == false then
-            if Players.LocalPlayer.Character and FunctionTable['getroot'](Players.LocalPlayer.Character) then
-                FunctionTable['getroot'](Players.LocalPlayer.Character).CFrame = safespotpos
-            end
-        end
-    end;
+    end,
+ })
+
+
+
+ local Tab = Window:CreateTab("Gamepasses")
+ local Section = Tab:CreateSection("Rainbow Gamepass")
+ local Button = Tab:CreateButton({
+    Name = "[] RainbowSword",
+    Callback = function()
+        game:GetService("ReplicatedStorage").RemoteEvent.GiveItemEvent:FireServer("RainbowPass","UnicornSword")
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] RainbowShuriken",
+    Callback = function()
+        game:GetService("ReplicatedStorage").RemoteEvent.GiveItemEvent:FireServer("RainbowPass","MetallicThrowingKnives")
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] GamepassCloth",
+    Callback = function()
+        game:GetService("ReplicatedStorage").RemoteEvent.GiveItemEvent:FireServer("RainbowPass","RainbowPackCloth")
+    end,
+ })
+
+ local Section = Tab:CreateSection("Vip Gamepass")
+ local Button = Tab:CreateButton({
+    Name = "[] GrimAxe",
+    Callback = function()
+        game:GetService("ReplicatedStorage").RemoteEvent.GiveItemEvent:FireServer("VipPass","GrimAxe")
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] ScytheOfSingularity",
+    Callback = function()
+        game:GetService("ReplicatedStorage").RemoteEvent.GiveItemEvent:FireServer("VipPass","ScytheOfSingularity")
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] BatwingScythe (GLITCHY)",
+    Callback = function()
+        game:GetService("ReplicatedStorage").RemoteEvent.GiveItemEvent:FireServer("VipPass","BatWingScythe")
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] ChakraShuriken",
+    Callback = function()
+        game:GetService("ReplicatedStorage").RemoteEvent.GiveItemEvent:FireServer("VipPass","Chakra")
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] BoneScythe",
+    Callback = function()
+        game:GetService("ReplicatedStorage").RemoteEvent.GiveItemEvent:FireServer("VipPass","BoneScythe")
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] VipGamepassCloth",
+    Callback = function()
+        game:GetService("ReplicatedStorage").RemoteEvent.GiveItemEvent:FireServer("VipPass","VipPackCloth")
+    end,
+ })
+
+ local Section = Tab:CreateSection("Pizza Gamepass")
+ local Button = Tab:CreateButton({
+    Name = "[] PizzaSword",
+    Callback = function()
+        game:GetService("ReplicatedStorage").RemoteEvent.GiveItemEvent:FireServer("PizzaPass","PizzaSword")
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] PizzaShuriken",
+    Callback = function()
+        game:GetService("ReplicatedStorage").RemoteEvent.GiveItemEvent:FireServer("PizzaPass","PizzaKunai")
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] PizzaGamepassCloth",
+    Callback = function()
+        game.ReplicatedStorage.RemoteEvent.GiveItemEvent:FireServer("PizzaPass", "PizzaPackCloth")
+    end,
+})
+
+local Section = Tab:CreateSection("Silly Shurikens Gamepass")
+local Button = Tab:CreateButton({
+    Name = "[] BoomerangDagger",
+    Callback = function()
+        game:GetService("ReplicatedStorage").RemoteEvent.GiveItemEvent:FireServer("FunnyThrowPass","BoomerangDagger")
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] DarkageKunai",
+    Callback = function()
+        game:GetService("ReplicatedStorage").RemoteEvent.GiveItemEvent:FireServer("FunnyThrowPass","DarkageKunai")
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] GhostDagger",
+    Callback = function()
+        game:GetService("ReplicatedStorage").RemoteEvent.GiveItemEvent:FireServer("FunnyThrowPass","GhostDagger")
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] GrabBagShuriken",
+    Callback = function()
+        game:GetService("ReplicatedStorage").RemoteEvent.GiveItemEvent:FireServer("FunnyThrowPass","GrabBag")
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] OctopusShuriken",
+    Callback = function()
+        game:GetService("ReplicatedStorage").RemoteEvent.GiveItemEvent:FireServer("FunnyThrowPass","OctopusCannon")
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] StarfishShuriken",
+    Callback = function()
+        game:GetService("ReplicatedStorage").RemoteEvent.GiveItemEvent:FireServer("FunnyThrowPass","StarfishShuriken")
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] DonutsShuriken",
+    Callback = function()
+        game:GetService("ReplicatedStorage").RemoteEvent.GiveItemEvent:FireServer("FunnyThrowPass","ThrowingDonuts")
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] WarRockShuriken",
+    Callback = function()
+        game:GetService("ReplicatedStorage").RemoteEvent.GiveItemEvent:FireServer("FunnyThrowPass","WarRock")
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] HandleShuriken",
+    Callback = function()
+        game:GetService("ReplicatedStorage").RemoteEvent.GiveItemEvent:FireServer("FunnyThrowPass","Handle")
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] Flower Shuriken [1]",
+    Callback = function()
+        game:GetService("ReplicatedStorage").RemoteEvent.GiveItemEvent:FireServer("FunnyThrowPass","FlowerStar1")
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] Flower Shuriken [2]",
+    Callback = function()
+        game:GetService("ReplicatedStorage").RemoteEvent.GiveItemEvent:FireServer("FunnyThrowPass","FlowerStar2")
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] Flower Shuriken [3]",
+    Callback = function()
+        game:GetService("ReplicatedStorage").RemoteEvent.GiveItemEvent:FireServer("FunnyThrowPass","FlowerStar3")
+    end,
+ })
+
+ local Section = Tab:CreateSection("Silly Swords Gamepass")
+ local Button = Tab:CreateButton({
+    Name = "[] DualPlungers",
+    Callback = function()
+        game:GetService("ReplicatedStorage").RemoteEvent.GiveItemEvent:FireServer("FunnySwordPass","DualPlungers")
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] FryingPan",
+    Callback = function()
+        game:GetService("ReplicatedStorage").RemoteEvent.GiveItemEvent:FireServer("FunnySwordPass","Frying Pan")
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] SummerSword",
+    Callback = function()
+        game:GetService("ReplicatedStorage").RemoteEvent.GiveItemEvent:FireServer("FunnySwordPass","SummerSword")
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] GuitarSword",
+    Callback = function()
+        game:GetService("ReplicatedStorage").RemoteEvent.GiveItemEvent:FireServer("FunnySwordPass","GuitarSword")
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] StopsignAxe",
+    Callback = function()
+        game:GetService("ReplicatedStorage").RemoteEvent.GiveItemEvent:FireServer("FunnySwordPass","StopSignAxe")
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] MackerelSword",
+    Callback = function()
+        game:GetService("ReplicatedStorage").RemoteEvent.GiveItemEvent:FireServer("FunnySwordPass","Mackerel")
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] BoardWithANail",
+    Callback = function()
+        game:GetService("ReplicatedStorage").RemoteEvent.GiveItemEvent:FireServer("FunnySwordPass","BoardWithANailInIt")
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] BigBugNet",
+    Callback = function()
+        game:GetService("ReplicatedStorage").RemoteEvent.GiveItemEvent:FireServer("FunnySwordPass","BigBugNet")
+    end,
+ })
+ local Button = Tab:CreateButton({
+    Name = "[] SpringtimeCutlass",
+    Callback = function()
+        game:GetService("ReplicatedStorage").RemoteEvent.GiveItemEvent:FireServer("FunnySwordPass","SpringtimeCutlass")
+    end,
+ })
+
+-----------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+while not game:IsLoaded() or not game:GetService("CoreGui") or not game:GetService("Players").LocalPlayer or not game:GetService("Players").LocalPlayer.PlayerGui or not game:GetService("CoreGui"):FindFirstChild("TopBarApp") or not game:GetService("CoreGui"):FindFirstChild("PlayerList") or not game.Players.LocalPlayer.Character do wait() end
+local on = true
+if not on then return end
+local PlaceValues = {
+    [823323202] = 1;
 }
 
-FunctionTable['SaveSettings'] = function()
-    local httpservice = game:GetService("HttpService")
-    if (writefile) then
-        local Settings = {}
-        Settings.VariableTable = VariableTable
-        Settings.OptionTable = OptionTable
-        Settings.TotalTime = totalTime + workspace.DistributedGameTime
-        writefile(filename,httpservice:JSONEncode(Settings))
+if not PlaceValues[game.PlaceId] then return end
+
+repeat task.wait(0.1) until game.Players.LocalPlayer:FindFirstChild("leaderstats")
+
+local numofstats = 0
+for i,v in ipairs(game.Players.LocalPlayer:FindFirstChild("leaderstats"):GetChildren()) do
+    numofstats = numofstats + 1
+end
+local numnum = numofstats * 110
+local xvalue = numnum + 172
+local divxvalue = xvalue - 110
+local coregui = game:GetService("CoreGui")
+local playerlist = coregui:WaitForChild("PlayerList")
+local Teams = game:GetService("Teams")
+local Players = game:GetService("Players")
+local plrsandteams = playerlist:WaitForChild("PlayerListMaster").OffsetFrame.PlayerScrollList.SizeOffsetFrame.ScrollingFrameContainer.ScrollingFrameClippingFrame.ScollingFrame.OffsetUndoFrame
+local titlebar = playerlist.PlayerListMaster.OffsetFrame.PlayerScrollList.SizeOffsetFrame:WaitForChild("TitleBar")
+local suffixes = {'','K+','M+','B+','T+','qd+','Qn+','sx+','Sp+','O+','N+','de+','Ud+','DD+','tdD+','qdD+','QnD+','sxD+','SpD+','OcD+','NvD+','Vgn+','UVg+','DVg+','TVg+','qtV+','QnV+','SeV+','SPG+','OVG+','NVG+','TGN+','UTG+','DTG+','tsTG+','qtTG+','QnTG+','ssTG+','SpTG+','OcTG+','NoAG+','UnAG+','DuAG+','TeAG+','QdAG+','QnAG+','SxAG+','SpAG+','OcAG+','NvAG+','CT+'}
+local TeamValues = {}
+local PlayerValues = {}
+local Exceptions = {
+    ['Reputation'] = 1;
+    ['Power'] = 1;
+}
+local LBExceptions = {
+    ['Realm'] = 150;
+}
+
+local function comma_value(n)
+    if tonumber(n) then
+        local left,num,right = string.match(n,'^([^%d]*%d)(%d*)(.-)$')
+        return left..(num:reverse():gsub('(%d%d%d)','%1,'):reverse())..right
+    else
+        return n
+    end
+end
+local function format(val)
+    if tonumber(val) then
+        local negative = false
+        if string.sub(val,1,1) == "-" then
+            val = string.sub(val,2,string.len(val))
+            negative = true
+        end
+        for i=1, #suffixes do
+            if tonumber(val) < 10^(i*3) then
+                local value = math.floor(val/((10^((i-1)*3))/100))/(100)..suffixes[i]
+                if negative then value = "-"..value end
+                return value
+            end
+        end
+    else
+        return val
+    end
+end
+local function GetPlayer(text)
+    for _,Player in pairs(game.Players:GetPlayers()) do
+        if string.sub(string.lower(Player.Name),1,string.len(text)) == string.lower(text) then
+            return Player
+        elseif string.sub(string.lower(Player.DisplayName),1,string.len(text)) == string.lower(text) then
+            return Player
+        elseif Player.UserId == tonumber(text) then
+            return Player
+        end
+    end
+end
+local function UpdateTeamValues()
+    for i,v in pairs(TeamValues) do
+        TeamValues[i] = 0
+    end
+    local plr
+    for i,v in pairs(Players:GetPlayers()) do
+        if v:FindFirstChild("leaderstats") then
+            plr = v
+            for i,v in pairs(v:FindFirstChild("leaderstats"):GetChildren()) do
+                if tonumber(v.Value) then
+                    TeamValues[plr.Team.Name.."_"..v.Name] = TeamValues[plr.Team.Name.."_"..v.Name] + v.Value
+                end
+            end
+        end
+    end
+    for i,v in pairs(plrsandteams:GetChildren()) do
+        if string.sub(v.Name,1,1) == "t" then
+            for i,v in pairs(v:GetChildren()) do
+                if string.lower(string.sub(v.Name,1,8)) == "gamestat" then
+                    local statname = string.sub(v.Name,10,string.len(v.Name))
+                    if Exceptions[statname] then
+                        if tonumber(TeamValues[v.Parent.NameFrame.BGFrame.OverlayFrame.TeamName.Text.."_"..statname]) then
+                            v.OverlayFrame.StatText.Text = format(TeamValues[v.Parent.NameFrame.BGFrame.OverlayFrame.TeamName.Text.."_"..statname])
+                        else
+                            v.OverlayFrame.StatText.Text = "-"
+                        end
+                    else
+                        if tonumber(TeamValues[v.Parent.NameFrame.BGFrame.OverlayFrame.TeamName.Text.."_"..statname]) then
+                            v.OverlayFrame.StatText.Text = comma_value(TeamValues[v.Parent.NameFrame.BGFrame.OverlayFrame.TeamName.Text.."_"..statname])
+                        else
+                            v.OverlayFrame.StatText.Text = "-"
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
+local function UpdatePlayerStats(plr)
+    repeat task.wait(0.1) until plr:FindFirstChild("leaderstats")
+    for i,v in pairs(plr:FindFirstChild("leaderstats"):GetChildren()) do
+        if not PlayerValues[plr.Name.."_"..v.Name] then
+            PlayerValues[plr.Name.."_"..v.Name] = 0
+        end
+        PlayerValues[plr.Name.."_"..v.Name] = v.Value
+    end
+    for i,v in pairs(plrsandteams:GetChildren()) do
+        if string.sub(v.Name,1,1) == "p" then
+            if GetPlayer(string.sub(v.Name,3,string.len(v.Name))) == plr then
+                for i,v in pairs(v.ChildrenFrame:GetChildren()) do
+                    if string.lower(string.sub(v.Name,1,8)) == "gamestat" then
+                        local statname = string.sub(v.Name,10,string.len(v.Name))
+                        if Exceptions[statname] then
+                            v.OverlayFrame.StatText.Text = format(PlayerValues[plr.Name.."_"..statname])
+                        else
+                            v.OverlayFrame.StatText.Text = comma_value(PlayerValues[plr.Name.."_"..statname])
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
+local function UpdatePlayerListSize()
+    for i,v in pairs(plrsandteams:GetChildren()) do
+        if string.sub(v.Name,1,1) == "t" then
+            for i,v in pairs(v:GetChildren()) do
+                if v.Name == "BackgroundExtender" then
+                    if v.Size ~= UDim2.new(1,0,1,0) then
+                        v.Size = UDim2.new(1,0,1,0)
+                    end
+                end
+                if string.lower(string.sub(v.Name,1,8)) == "gamestat" then
+                    local statname = string.sub(v.Name,10,string.len(v.Name))
+                    if v.Size ~= UDim2.new(1,-divxvalue,1,0) then
+                        v.Size = UDim2.new(1,-divxvalue,1,0)
+                    end
+                end
+            end
+        elseif string.sub(v.Name,1,1) == "p" then
+            for i,v in pairs(v.ChildrenFrame:GetChildren()) do
+                if v.Name == "BackgroundExtender" then
+                    if v.Size ~= UDim2.new(1,0,1,0) then
+                        v.Size = UDim2.new(1,0,1,0)
+                    end
+                end
+                if string.lower(string.sub(v.Name,1,8)) == "gamestat" then
+                    local statname = string.sub(v.Name,10,string.len(v.Name))
+                    if v.Size ~= UDim2.new(1,-divxvalue,1,0) then
+                        v.Size = UDim2.new(1,-divxvalue,1,0)
+                    end
+                end
+            end
+        end
+    end
+    for i,v in pairs(titlebar.ChildrenFrame:GetChildren()) do
+        if string.lower(string.sub(v.Name,1,4)) == "stat" then
+            local statname = string.sub(v.Name,10,string.len(v.Name))
+            if v.Size ~= UDim2.new(1,-divxvalue,1,0) then
+                v.Size = UDim2.new(1,-divxvalue,1,0)
+            end
+        end
     end
 end
 
-FunctionTable['MasterFunc'] = function(Text,UIElement,Save,Loading)
-    if Save == nil then
-        Save = true
-    end
-    if Loading == nil then
-        Loading = false
-    end
-    if UIElement:IsA("TextButton") then
-        if VariableTable[Text] ~= nil and Loading ~= true then
-            VariableTable[Text] = not VariableTable[Text]
-        end
-        local ButtonTable = FunctionTable['SetButton'](VariableTable[Text])
-        UIElement.TextColor3 = ButtonTable[1]
-        UIElement.Text = ButtonTable[2]
-    elseif UIElement:IsA("TextBox") then
-        if VariableTable[Text] ~= nil and Loading ~= true then
-            if tonumber(UIElement.Text) then
-                VariableTable[Text] = tonumber(UIElement.Text)
-            else
-                VariableTable[Text] = UIElement.Text
-            end
-        elseif Loading == true then
-            UIElement.Text = VariableTable[Text]
-        end
-    end
-    if Save then
-        FunctionTable['SaveSettings']()
-    end
-    if FunctionTable.VariableFunctions[Text] then
-        FunctionTable.VariableFunctions[Text]()
+for i,v in pairs(game.Teams:GetChildren()) do
+    local teamname = v.Name
+    for i,v in pairs(Players.LocalPlayer:FindFirstChild("leaderstats"):GetChildren()) do
+        TeamValues[teamname.."_"..v.Name] = 0
     end
 end
 
-FunctionTable['HumDied'] = function()
-    if VariableTable['AutoRespawn'] == true then
-        charrespawning = true
-        if BackupsFolder:FindFirstChild("TrainChildren") then BackupsFolder.TrainChildren:ClearAllChildren() end
-        respos = Player.Character:FindFirstChild("HumanoidRootPart").CFrame
-        local mainspawn = Player.PlayerGui:FindFirstChild("FirstScreenGui").MainSpawnBtn
-        local randomspawn = Player.PlayerGui:FindFirstChild("FirstScreenGui").RandomSpawnBtn
-        game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvent"):WaitForChild("SpawnCharacterEvent"):FireServer("MainSpawn")
-        game:GetService("Lighting"):WaitForChild("Blur").Size = 0
-        game:GetService("Lighting"):WaitForChild("Blur").Enabled = false
-        mainspawn.TextTransparency = 1
-        mainspawn.BackgroundTransparency = 1
-        randomspawn.TextTransparency = 1
-        randomspawn.BackgroundTransparency = 1
-        Player.PlayerGui:FindFirstChild("FirstScreenGui").Enabled = false
-    end
+for i,v in pairs(Players:GetPlayers()) do
+    task.spawn(function()
+        repeat task.wait() until v:FindFirstChild("leaderstats")
+        if v:FindFirstChild("leaderstats") then
+            local plr = v
+            for i,v in pairs(v:FindFirstChild("leaderstats"):GetChildren()) do
+                v:GetPropertyChangedSignal("Value"):Connect(function()
+                    UpdateTeamValues()
+                    UpdatePlayerStats(plr)
+                end)
+            end
+            UpdatePlayerStats(plr)
+        end
+        UpdatePlayerListSize()
+    end)
 end
 
-----------
-
-FunctionTable['UpdateElements'] = function()
-    local guiopen = true
-    local canclick = true
-    local lastpos = nil
-    local MidBar = Main.AdminFrame.MidBar
-
-    Main.AdminImgBtn.MouseButton1Click:Connect(function()
-        if guiopen == false and canclick == true then
-            guiopen = true
-            if lastpos ~= nil then
-                FunctionTable['CreateTween'](Main.AdminFrame,TweenInfo.new(0.75, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{Position = lastpos},true,function() canclick = true end)
-                canclick = false
-            else
-                FunctionTable['CreateTween'](Main.AdminFrame,TweenInfo.new(0.75, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{Position = UDim2.new(0.625, 0, 0.6, 0)},true,function() canclick = true end)
-                canclick = false
-            end
-        elseif guiopen == true and canclick == true then
-            lastpos = Main.AdminFrame.Position
-            guiopen = false
-            FunctionTable['CreateTween'](Main.AdminFrame,TweenInfo.new(0.75, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{Position = UDim2.new(1, 0, 0.6, 0)},true,function() canclick = true end)
-            canclick = false
+Players.PlayerAdded:Connect(function(plr)
+    repeat task.wait() until plr:FindFirstChild("leaderstats")
+    repeat
+        task.wait()
+        local plrnumofstats = 0
+        for i,v in ipairs(plr:FindFirstChild("leaderstats"):GetChildren()) do
+            plrnumofstats = plrnumofstats + 1
         end
-    end)
-    Main.AdminImgBtn.MouseEnter:Connect(function()
-        Main.AdminImgBtn.ImageColor3 = Color3.fromRGB(230,230,230)
-    end)
-    Main.AdminImgBtn.MouseLeave:Connect(function()
-        Main.AdminImgBtn.ImageColor3 = Color3.fromRGB(255,255,255)
-    end)
-
-    local commandbarvisible = false
-    UserInputService.InputBegan:Connect(function(input, processed)
-        if input.KeyCode == Enum.KeyCode.LeftBracket then
-            local textbox = CommandBar
-            local frame = CommandBarFrame
-            if commandbarvisible == false then
-                FunctionTable['CreateTween'](frame,TweenInfo.new(0.2,Enum.EasingStyle.Quad),{Position = UDim2.new(0.5,0,0.9,0)},true)
-                FunctionTable['CreateTween'](frame,TweenInfo.new(0.2,Enum.EasingStyle.Quad),{BackgroundTransparency = 0},true)
-                textbox:CaptureFocus()
-                task.wait()
-                textbox.Text = ""
-                commandbarvisible = true
-            end
-        elseif input.UserInputType == Enum.UserInputType.MouseButton1 and not processed then
-            if VariableTable['AutoEquip'] == true then
-                local Conditions = Players.LocalPlayer.Character 
-                if not Conditions then return end
-                local Tool = Players.LocalPlayer.Character:FindFirstChild("Sword") or Players.LocalPlayer.Character:FindFirstChild("Shuriken") or Players.LocalPlayer.Character:FindFirstChild("Teleport")
-                if not Tool then return end
-                Tool:Activate()
-            end
-        end
-    end)
-    CommandBar.FocusLost:Connect(function()
-        local msg = CommandBar.Text
-        msg = string.lower(msg)
-        local splitstring = msg:split(" ")
-        local slashcommand = splitstring[1]
-        if commandbarvisible == true then
-            CommandBar.Text = ""
-            FunctionTable['CreateTween'](CommandBarFrame,TweenInfo.new(0.2,Enum.EasingStyle.Quad),{Position = UDim2.new(0.5,0,1,0)},true)
-            FunctionTable['CreateTween'](CommandBarFrame,TweenInfo.new(0.2,Enum.EasingStyle.Quad),{BackgroundTransparency = 1},true)
-            commandbarvisible = false
-        end
-        if commands[slashcommand] then
-            local arguments = {}
-            for i = 2, #splitstring, 1 do
-                table.insert(arguments,splitstring[i])
-            end
-            commands[slashcommand](Players.LocalPlayer,arguments)
-        end
-    end)
-
-    local DragMousePosition
-    local FramePosition
-    local Draggable = true
-    local CurrentCamera = workspace:WaitForChild("Camera")
-    Main.AdminFrame.TopBar.InputBegan:Connect(function(input)
-        if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-            Draggable = true
-            DragMousePosition = Vector2.new(input.Position.X, input.Position.Y)
-            FramePosition = Vector2.new(Main.AdminFrame.Position.X.Scale, Main.AdminFrame.Position.Y.Scale)
-        end
-    end)
-    Main.AdminFrame.TopBar.InputEnded:Connect(function(input)
-        if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-            Draggable = false
-        end
-    end)
-    UserInputService.InputChanged:Connect(function(input)
-        pcall(function()
-            if Draggable == true then
-                local NewPosition = FramePosition + ((Vector2.new(input.Position.X, input.Position.Y) - DragMousePosition) / CurrentCamera.ViewportSize)
-                Main.AdminFrame.Position = UDim2.new(NewPosition.X, 0, NewPosition.Y, 0)
-            end
+    until plrnumofstats == numofstats
+    for i,v in pairs(plr:FindFirstChild("leaderstats"):GetChildren()) do
+        v:GetPropertyChangedSignal("Value"):Connect(function()
+            UpdateTeamValues()
+            UpdatePlayerStats(plr)
         end)
-    end)
-    
-    for i,v in pairs(MidBar.MainFrame:GetDescendants()) do
-        if v:IsA("TextButton") then
-            v.MouseButton1Click:Connect(function()
-                local TextLabel = v.Name
-                if v.Text == "Off" or v.Text == "On" then
-                    TextLabel = string.sub(v.Parent.TextLabel.Text,1,string.len(v.Parent.TextLabel.Text) - 1)
-                end
-                FunctionTable['MasterFunc'](tostring(TextLabel),v)
-            end)
-        elseif v:IsA("TextBox") then
-            v.FocusLost:Connect(function()
-                local TextLabel = string.sub(v.Parent.TextLabel.Text,1,string.len(v.Parent.TextLabel.Text) - 1)
-                FunctionTable['MasterFunc'](tostring(TextLabel),v)
-            end)
+    end
+    task.wait(0.5)
+    UpdatePlayerStats(plr)
+    UpdatePlayerListSize()
+end)
+Players.PlayerRemoving:Connect(function(plr)
+    UpdateTeamValues()
+end)
+
+playerlist.PlayerListMaster.Size = UDim2.new(0,xvalue,0,680)
+UpdatePlayerListSize()
+
+task.spawn(function()
+    while task.wait(1) do
+        for i,plr in pairs(Players:GetPlayers()) do
+            UpdatePlayerStats(plr)
+        end
+        UpdateTeamValues()
+        UpdatePlayerListSize()
+    end
+end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+while not game:IsLoaded() or not game:GetService("CoreGui") or not game:GetService("Players").LocalPlayer or not game:GetService("Players").LocalPlayer.PlayerGui or not game:GetService("CoreGui"):FindFirstChild("TopBarApp") or not game:GetService("CoreGui"):FindFirstChild("PlayerList") or not game.Players.LocalPlayer.Character do task.wait(0.03) end
+local on = true
+if not on then return end
+if game.PlaceId ~= 823323202 then return end
+
+local Players = game:GetService("Players")
+local Player = Players.LocalPlayer
+
+task.spawn(function()
+    for i,v in pairs(Player.PlayerGui:GetChildren()) do
+        if v.Name == "ScreenGui" and v:FindFirstChild("Frame") then
+            v:Destroy()
         end
     end
+    repeat task.wait() until Players.LocalPlayer:FindFirstChild("PlayerGui")
+    local clone = Players.LocalPlayer.PlayerGui.PlayerScript:Clone()
+    clone.Parent = Players.LocalPlayer.PlayerGui
+    repeat task.wait() until Players.LocalPlayer:FindFirstChild("GuiScript")
+    local clone2 = Players.LocalPlayer.PlayerGui.GuiScript:Clone()
+    clone2.Parent = Players.LocalPlayer.PlayerGui
+end)
 
-    task.spawn(function()
-        for i,v in pairs(Player.PlayerGui:GetChildren()) do
-            if v.Name == "ScreenGui" and v:FindFirstChild("Frame") then
-                v:Destroy()
-            end
-        end
-        repeat task.wait() until Players.LocalPlayer:FindFirstChild("PlayerGui")
-        local clone = Players.LocalPlayer.PlayerGui.PlayerScript:Clone()
-        clone.Parent = Players.LocalPlayer.PlayerGui
-        repeat task.wait() until Players.LocalPlayer:FindFirstChild("GuiScript")
-        local clone2 = Players.LocalPlayer.PlayerGui.GuiScript:Clone()
-        clone2.Parent = Players.LocalPlayer.PlayerGui
-    end)
-    
-end
-
-FunctionTable['UpdateTextFrames'] = function()
-    coroutine.resume(coroutine.create(function()
-        while wait() do
-            local tempTime = totalTime + workspace.DistributedGameTime
-            TextLabel_16.Text = FunctionTable['comma_value'](Players.LocalPlayer.leaderstats.Ninjutsu.Value)
-            TextLabel_18.Text = FunctionTable['comma_value'](Players.LocalPlayer.leaderstats.Reputation.Value)
-            TextLabel_20.Text = FunctionTable['ConvertToDHM'](workspace.DistributedGameTime)
-            TextLabel_22.Text = FunctionTable['ConvertToDHM'](tempTime)
-        end
-    end))
-    coroutine.resume(coroutine.create(function()
-        while wait(300) do
-            FunctionTable['SaveSettings']()
-        end
-    end))
-end
-
-FunctionTable['LoadSettings'] = function()
-    local httpservice = game:GetService("HttpService")
-    if (readfile and isfile and isfile(filename)) then
-        local Settings = httpservice:JSONDecode(readfile(filename))
-        if Settings.OptionTable ~= nil then
-            OptionTable = Settings.OptionTable
-        end
-        if Settings.TotalTime ~= nil then
-            totalTime = Settings.TotalTime
-        end
-        if Settings.VariableTable ~= nil then
-            VariableTable = Settings.VariableTable
-            for i,v in pairs(VariableTable) do
-                if v == true then
-                    FunctionTable['MasterFunc'](tostring(i),FunctionTable['FindButton'](tostring(i)),false,true)
-                elseif type(v) == "number" then
-                    FunctionTable['MasterFunc'](tostring(i),FunctionTable['FindButton'](tostring(i)),false,true)
-                end
-            end
-        end
-    end
-end
-
-
-FunctionTable['UpdateElements']()
-FunctionTable['UpdateTextFrames']()
-FunctionTable['LoadSettings']()
-
-
-Character:WaitForChild("Humanoid").Died:Connect(FunctionTable['HumDied'])
-
-Players.LocalPlayer.CharacterAdded:Connect(function(NewCharacter)
-    task.spawn(function()
-        task.wait(0.25)
-        Character = NewCharacter
-    end)
-    repeat task.wait(0.05) until NewCharacter:FindFirstChild("HumanoidRootPart") and NewCharacter:FindFirstChild("Humanoid") and Players.LocalPlayer:HasAppearanceLoaded() and FunctionTable['getroot'](NewCharacter)
-    if respos ~= nil then
-        for i = 1,5 do
-            NewCharacter:WaitForChild("HumanoidRootPart").CFrame = respos
-            task.wait(0.03)
-        end
-    end
-    repeat task.wait(0.05) until Players.LocalPlayer.Backpack:FindFirstChild("Train")
-    if VariableTable['NoTS'] == true then
-        FunctionTable.VariableFunctions['NoTS']()
-    end
-    NewCharacter:WaitForChild("Humanoid").Died:Connect(FunctionTable['HumDied'])
+Player.CharacterAdded:Connect(function(char)
+    repeat wait() until char:FindFirstChild("HumanoidRootPart")
     task.spawn(function()
         for i,v in pairs(Player.PlayerGui:GetChildren()) do
             if v.Name == "ScreenGui" and v:FindFirstChild("Frame") then
@@ -1527,11 +1384,4 @@ Players.LocalPlayer.CharacterAdded:Connect(function(NewCharacter)
         local clone2 = Players.LocalPlayer.PlayerGui:WaitForChild("GuiScript"):Clone()
         clone2.Parent = Players.LocalPlayer.PlayerGui
     end)
-    charrespawning = false
-end)
-
-Players.PlayerRemoving:Connect(function(removedPlr)
-    if removedPlr == Players.LocalPlayer then
-        FunctionTable['SaveSettings']()
-    end
 end)
